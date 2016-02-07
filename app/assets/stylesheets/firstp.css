@@ -3,8 +3,9 @@ a{text-decoration:none;}
 img{border:none;}   /*#E6C40A*/
 a:hover, a:focus{text-decoration:none;}
 
-body{font-size: 62.5%;background-color:#FFF;/*font-family: 'IM Fell DW Pica', serif;font-family: 'Rancho', cursive;*/font-family: 'Expletus Sans', cursive;/*font-family: 'Exo 2', sans-serif;*/}
-p{font-size:18px;color:#000;line-height:34px;margin-bottom:25px;/*font-family: 'Rambla', sans-serif;*/font-family: 'Josefin Slab', serif;font-weight:600}
+/*body{font-size: 62.5%;background-color:#FFF;*//*font-family: 'IM Fell DW Pica', serif;font-family: 'Rancho', cursive;*//*font-family: 'Expletus Sans', cursive;*//*font-family: 'Exo 2', sans-serif;*//*}*/
+body{font-size: 62.5%;background-color:#FFF;font-family: 'Expletus Sans', cursive;}
+p{font-size:18px;color:#000;line-height:34px;margin-bottom:25px;font-family: 'Josefin Slab', serif;font-weight:600}
 h3{font-size:28px;font-weight:bold;text-align:center;margin:25px 0px 50px;text-transform:uppercase;text-shadow:2px 2px 1px #000;}
 h3.odd{color:#FFC200;}
 h3.even{color:#fff;}
@@ -31,7 +32,7 @@ h2 a:focus, a:hover{color:#FFC200;}
 .text-left{text-align:left;}
 .text-right{text-align:right;}
 
-.content{padding:0px 15px;background-color:}
+.content{padding:0px 15px;}
 
 /*header{background-color:}*/
 
