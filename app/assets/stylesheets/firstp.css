@@ -56,7 +56,7 @@ box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);}
 
 
 /*BANNER*/
-.banner{/*border:2px ridge #FFF;*//*position:absolute;top:0;min-height:640px;*/height:800px;}
+.banner{/*border:2px ridge #FFF;*//*position:absolute;top:0;min-height:640px;*/max-height:600px;}
 .banner .flexslider{padding:0;}
 .banner .flex-direction-nav li a{background-color:#000;top:36%;border:3px dotted #FFC200;display:none;}
 .banner .flexslider:hover li a{display:block;}
@@ -129,29 +129,30 @@ box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);}
 
 
 /*FOOTER*/
-.footer{background-color:#EEEFEF;padding:4.5% 0 0;-webkit-box-shadow: 0px -5px 11px -2px rgba(0,0,0,1);
+.footer{/* background-color:#EEEFEF; */ background: url('http://www.designbolts.com/wp-content/uploads/2012/12/White-wall-Seamless-Pattern-For-Website-Background.jpg');padding:4.5% 0 0;-webkit-box-shadow: 0px -5px 11px -2px rgba(0,0,0,1);
 -moz-box-shadow: 0px -5px 11px -2px rgba(0,0,0,1);
 box-shadow: 0px -5px 11px -2px rgba(0,0,0,1);}
-.footer p{color:#8C8C8C;}
+.footer p{color:#8C8C8C; font-size: 16px;}
 
 .footer-top{padding-bottom:2.5%;}
 .footer-top .footer-content .col-md-4{padding:0px 3.5%;}
-.footer-top h4{border-top:2px solid #A1A1A1;border-bottom:6px groove #B1B1B1;padding:15px 0px 8px;margin-bottom:25px;text-align:center;color:#8C8C8C;font-size:22px;letter-spacing:3px;word-spacing:5px;}
+.footer-top h4{border-top:1px groove #ffffff;border-bottom:2px groove #eeefef;padding:18px 0px 10px;margin-bottom:25px;text-align:center;color:#8C8C8C;font-size:18px;letter-spacing:1px;word-spacing:5px;font-family: Josefin Slab;font-weight: bold;}
 .footer-top  ul li{font-size:16px;}
-.footer-top ul li a{color:#8C8C8C;}
+.footer-top ul li a{color:#8C8C8C;font-family: "Josefin Slab",serif;font-size: 18px;}
 
 .contact-us input,textarea{margin-bottom:10px;border:none;border-bottom:1px solid }
 .contact-us .submit-btn{width:100%;float:left;text-align:right;}
 .contact-us .submit-btn input{font-size:14px;float:none;display:inline-block;padding:5px 5px 3px;min-width:120px;}
 
 .social-link ul{padding-left:8%;text-align:left;}
-.social-link ul li{margin-bottom:8px;}
+.social-link ul li{margin-bottom:12px;}
 .social-link ul li:hover a{color:#333;}
+.social-link ul li:hover{cursor: pointer;}
 .social-link ul li img{border-radius:50%;border:2px solid transparent;}
 .social-link ul li img:hover{border:2px solid #FFC200;}
 .social-link ul li span{margin-right:5px;font-size:20px;}
 
-.footer-bottom{background-color:#000;padding:1.5% 0;}
+.footer-bottom { /*background-color:#000 */ background: url('http://www.ilikewallpaper.net/iphone-5-wallpapers/download/5641/Hexagons-Block-iphone-5-wallpaper-ilikewallpaper_com_200.jpg');padding:1.5% 0;}
 .footer-bottom p{color:#8C8C8C;margin-bottom:0;font-size:14px;}
 .footer-menu ul{margin:0;text-align:right;}
 .footer-menu ul li{font-size:14px;font-weight:normal;margin:5px 10px;}
