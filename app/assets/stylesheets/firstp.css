@@ -86,6 +86,7 @@ box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);}
 .read-more a:hover{color:#000;border:2px solid #FFC200;}
 .read-more a::after{content:"";position:absolute;display:inline-block;background-color:#FFF;height:100%;left:0;top:0;width:0;z-index:-1;transition:width 0.2s ease-out 0s;}
 .read-more a:hover::after{width:100%;}
+.info-block .text-block h3{line-height:50px;}
 
 .info-block.odd p{color:#000;}
 .info-block.odd .text-block{padding-left:3%;text-align:left;}
@@ -140,9 +141,11 @@ box-shadow: 0px -5px 11px -2px rgba(0,0,0,1);}
 .footer-top  ul li{font-size:16px;}
 .footer-top ul li a{color:#8C8C8C;font-family: "Josefin Slab",serif;font-size: 18px;}
 
-.contact-us input,textarea{margin-bottom:10px;border:none;border-bottom:1px solid }
+.contact-us input{margin-bottom:10px;border:none;border-bottom:1px solid }
+.contact-us textarea{margin-bottom:10px;border:none;border-bottom:1px solid }
 .contact-us .submit-btn{width:100%;float:left;text-align:right;}
 .contact-us .submit-btn input{font-size:14px;float:none;display:inline-block;padding:5px 5px 3px;min-width:120px;}
+.contact-us input .form-control:focus{box-shadow:none;}
 
 .social-link ul{padding-left:8%;text-align:left;}
 .social-link ul li{margin-bottom:12px;}
@@ -150,7 +153,7 @@ box-shadow: 0px -5px 11px -2px rgba(0,0,0,1);}
 .social-link ul li:hover{cursor: pointer;}
 .social-link ul li img{border-radius:50%;border:2px solid transparent;}
 .social-link ul li img:hover{border:2px solid #FFC200;}
-.social-link ul li span{margin-right:5px;font-size:20px;}
+.social-link ul li span{margin-right:5px;font-size:20px;width:20px;top:2px;text-align:center;}
 
 .footer-bottom { /*background-color:#000 */ background: url('http://www.ilikewallpaper.net/iphone-5-wallpapers/download/5641/Hexagons-Block-iphone-5-wallpaper-ilikewallpaper_com_200.jpg');padding:1.5% 0;}
 .footer-bottom p{color:#8C8C8C;margin-bottom:0;font-size:14px;}
