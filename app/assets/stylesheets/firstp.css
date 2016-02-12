@@ -157,7 +157,89 @@ box-shadow: 0px -5px 11px -2px rgba(0,0,0,1);}
 
 .footer-bottom { /*background-color:#000 */ background: url('http://www.ilikewallpaper.net/iphone-5-wallpapers/download/5641/Hexagons-Block-iphone-5-wallpaper-ilikewallpaper_com_200.jpg');padding:1.5% 0;}
 .footer-bottom p{color:#8C8C8C;margin-bottom:0;font-size:14px;}
+.footer-bottom p span{color:#FFC200;font-weight:bold;}
 .footer-menu ul{margin:0;text-align:right;}
 .footer-menu ul li{font-size:14px;font-weight:normal;margin:5px 10px;}
 .footer-menu li a{color:#8C8C8C;padding:10px 5px 5px;position:relative;}
 .footer-menu ul li:hover a{color:#FFC200;}
+
+
+/*--MEDIA QUERIES*/
+
+@media screen and (min-width:1024px) and (max-width:1200px){
+	p{line-height:30px;}
+	.intro-block{padding:5% 0 4%;}
+	.intro-block h3{font-size:34px;margin-top:10px;margin-bottom:20px;}
+	.info-block .text-block{float:none;width:100%;}
+	.info-block.even .text-block{float:none;width:100%;}
+	.info-block.odd .text-block{padding-left:0;}
+	.info-block.even .text-block{padding-right:0;}
+	.info-block .text-block h3{margin-top:0;margin-bottom:15px;}
+	.info-block p{margin-bottom:10px;}
+}
+
+
+@media screen and (min-width:755px) and (max-width:970px){
+	h3{margin-bottom:40px;}
+	p{line-height:30px;}
+	.intro-block h3{font-size:34px;margin-bottom:30px;}
+	.info-block .text-block{float:none;width:100%;}
+	.info-block.even .text-block{float:none;width:100%;}
+	.info-block.odd .text-block{padding-left:0;}
+	.info-block.even .text-block{padding-right:0;}
+	.info-block .text-block h3{margin-top:0;margin-bottom:35px;}
+	.info-block p{margin-bottom:10px;}
+	.info-block .image-block img{min-height:0;height:auto;}
+}
+
+
+@media screen and (max-width:767px){
+	h3{font-size:26px;margin-bottom:30px;}	
+	p{margin-bottom:20px;font-size:16px;line-height:30px;}
+	
+	.intro-block{padding:4% 0 0;}
+	.intro-block h3{font-size:26px;margin-bottom:30px;}
+	
+	.info-block{padding:6% 0;}
+	.info-block .image-block{padding:0;}
+	.info-block.odd .text-block,.info-block.even .text-block{text-align:center;padding:0;}
+	.info-block.odd .text-block h3,.info-block.even .text-block h3{text-align:center;}
+	.info-block.odd .read-more,.info-block.even .read-more{text-align:center;}
+	.info-block .image-block img{min-height:0;height:auto;}
+	
+	.read-more a{font-size:14px;min-width:145px;}
+	
+	.testimonial-block{padding:5% 0 11%;}
+	
+	.footer{padding:6% 0 0;}
+	.footer-top{padding-bottom:6%;}
+	.footer-top h4{color:#000;}
+	.footer-top .footer-content .col-md-4{padding-bottom:8%;border-bottom:2px dashed #000;margin-bottom:11%;}
+	.footer-top .footer-content .col-md-4:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0;}
+	.footer-bottom{padding:6% 0 5%;}
+	.powered-by{padding-bottom:3%;}
+	.powered-by p{text-align:center;}
+	
+	.footer-menu ul{text-align:center;}
+}
+
+@media only screen and (max-width:480px) {
+	h3{font-size:22px;margin-bottom:20px;margin-top:15px;}	
+	p{margin-bottom:10px;font-size:15px;line-height:26px;}
+	
+	.intro-block{padding:14% 0 10%;}
+	.intro-block h3{font-size:24px;margin-bottom:20px;margin-top:0;}	
+	.intro-block p{line-height:26px;}
+	
+	.info-block{padding:16% 0 14%;}
+	.info-block p{margin-bottom:20px;}
+	
+	.testimonial-block{padding:10% 0 21%;}
+	
+	.footer{padding:12% 0 0;}
+	.footer-top{padding-bottom:12%;}
+	.footer-bottom{padding:13% 0 10%;}
+	.powered-by{padding-bottom:7%;}
+	
+	.footer-menu ul li{margin:10px;}
+}
