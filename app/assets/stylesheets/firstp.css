@@ -42,17 +42,15 @@ header{position:relative;min-height:1015px;overflow:hidden;}
 .header-top{padding:5px 0px 5px;background-color:#fff;opacity:0.8;z-index:10;height:40px;position:absolute;}
 .logo img{height:100px;margin:0px auto;position:relative;bottom:-10px;}
 
-.menublock{padding:10px 2% 5px;position:absolute;bottom:0;background-color:rgba(255,255,255,0.4);z-index:10;height:60px;font-family: 'Josefin Sans', sans-serif;}
-.menublock ul{list-style-type:none;margin:0;text-align:center;}
+.menublock{padding:10px 2% 5px;position:absolute;bottom:0;background-color:rgba(255,255,255,0.5);z-index:10;height:60px;font-family: 'Josefin Sans', sans-serif;}
+.menublock ul{list-style-type:none;margin:0;text-align:center;transition: all 0.3s linear 0s;}
 .menublock ul li{font-size:16px;margin:10px 20px;display:inline-block;}
 .menublock ul li a{color:#000;padding:15px 8px 5px;position:relative;}
 /*.menublock ul li a::after{content:"";position:absolute;top:0;left:0;height:3px;width:0;background-color:#0066CC;transition:all 0.2s ease-in 0s;}
 .menublock ul li:hover a::after{width:100%;}*/
 .menublock ul li:hover a{color:#0066CC;}
 
-.fixed-menu{transition: all 0.3s linear 0s;position:fixed;top:0;background-color:#fff;-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);}
+.fixed-menu{position:fixed;top:0;background-color: rgba(255,255,255,0.8);box-shadow: 5px -2px 5px 1px; transition: all 0.3s linear 0s;}
 .fixed-menu ul{text-align:right;}
 
 

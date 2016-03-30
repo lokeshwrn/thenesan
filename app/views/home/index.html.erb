@@ -353,12 +353,14 @@
 		/* wow script for animation */
 		var wow = new WOW().init();
 	});
+
+
 	$(document).ready(function(){
 		$('header').css("min-height", $(window).height());
-		$(document).on("scroll", function(){
+		$(document).on("scroll resize", function(){
 			var windowht = $(window).height();
 			var currentht = $(document).scrollTop();
-			if (currentht > windowht){
+			if (currentht > windowht-60){
 				$('.menublock').addClass('fixed-menu');
 			}
 			else {
