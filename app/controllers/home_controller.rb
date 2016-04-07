@@ -9,4 +9,8 @@ class HomeController < ApplicationController
   def aboutus
 
   end
+  
+  def products_page
+    
+  end
 end
