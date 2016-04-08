@@ -10,6 +10,12 @@ Rails.application.routes.draw do
 
   get 'home/summary'
 
+  get 'admin/articles', :to => 'admin#list_articles', :as => 'list_articles'
+  get 'admin/articles/:id/edit', :to => 'admin#edit_articles', :as => 'edit_articles'
+  get 'admin/articles/new', :to => 'admin#new_articles', :as => 'new_articles'
+  post 'articles' => 'admin#create_articles'
+  patch 'articles' => 'admin#update_articles'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -31,7 +31,7 @@
               <%= f.text_field :sequence_number, :class => 'form-white', :placeholder => 'Sequence Number' %>
             </p>
             <p class="form--right">
-              <%= f.text_field :content_url, :class => 'form-white', :placeholder => 'Content URL' %>
+              <%#= f.text_field :content_url, :class => 'form-white', :placeholder => 'Content URL' %>
             </p>
             <p class="form--left">
               <%= select_tag "article[article_type]", options_for_select([ "Services", "Modules"],@articles.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Type--" %>
