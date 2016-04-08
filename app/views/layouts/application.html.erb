@@ -10,14 +10,7 @@
 
   <%= csrf_meta_tags %>
 
-  <!--<link href='https://fonts.googleapis.com/css?family=Cuprum:400,700' rel='stylesheet' type='text/css'>-->
-  <!--<link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica' rel='stylesheet' type='text/css'>-->
-  <!--<link href='https://fonts.googleapis.com/css?family=Expletus+Sans:400,600,700' rel='stylesheet' type='text/css'>-->
-  <!--<link href='https://fonts.googleapis.com/css?family=Exo+2:400,800,700italic,900,600' rel='stylesheet' type='text/css'>-->
-  <!--<link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>-->
-  <!--<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>-->
   <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,600' rel='stylesheet' type='text/css'>
-  <!--<link href='https://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>-->
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <style type="text/css">
 	  body{-webkit-text-size-adjust: 100%;}
@@ -30,14 +23,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!--<link href="stylesheets/flexslider.css" media="all" type="text/css" rel="stylesheet"/>-->
   <!--<link href="stylesheets/animate.css" media="all" type="text/css" rel="stylesheet"/>-->
-  <!--<link href="stylesheets/firstp.css" media="all" type="text/css" rel="stylesheet"/>-->
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
 </head>
 <body>
 
-<%= yield %>
+<div id="wrapper">
+
+  <%= render :partial => 'layouts/header' %>
+
+  <%= yield %>
+
+  <%= render :partial => 'layouts/footer' %>
+</div>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 

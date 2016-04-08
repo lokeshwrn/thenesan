@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 
   end
 
-  def aboutus
+  def about_us
 
   end
   

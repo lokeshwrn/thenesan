@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+
+
+  get '/products', :to => 'home#products_page'
+  get '/about-us', :to => 'home#about_us'
+
   get 'home/index'
   get 'home/readmore'
   get 'home/aboutus'
-  get 'home/products_page'
+
   get 'home/summary'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -12,8 +17,8 @@ Rails.application.routes.draw do
   root 'home#index'
   # root 'home#readmore'
   # root 'home#aboutus'
-  #root 'home#products_page'
-  #root 'home#summary'
+  # root 'home#products_page'
+  # root 'home#summary'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
