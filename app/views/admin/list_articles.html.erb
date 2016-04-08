@@ -1,0 +1,35 @@
+<div class="container-block col-md-12 col-sm-12 col-xs-12 no-padding">
+  <div class="info-block col-md-12 col-sm-12 col-xs-12 no-padding" id="our-modules">
+    <div class="container no-padding">
+      <div class="row">
+
+        <div class="info-common-block col-md-12 col-sm-12 col-xs-12 no-padding">
+          <h2 id="contact"><a class="border"><%= @page_properties[:header] %></a></h2>
+
+	          <% @breadcrumb = {:Home => root_url, :List_Articles => "#"} %>
+	          <%= render :partial => 'layouts/breadcrumb' %>
+
+	        <div class="new_article">
+	          <div class="btn btn-5 btn-5b-rev keep_right">
+	            <%= link_to "New Article", new_articles_path%>
+	          </div>
+	        </div>
+
+          <% @articles.each do |article| %>
+
+              <div class="article-list-block col-md-4 col-sm-6 col-xs-12">
+                <a href="/admin/articles/<%= article.id %>/edit">
+                  <div class="article-content article-content-<%= article.status %>">
+                    <h3><%= article.title %></h3>
+                    <p><%= article.article_type %></p>
+                  </div>
+                </a>
+              </div>
+
+          <% end %>
+
+        </div><!--INFO-COMMON-BLOCK-->
+      </div><!--ROW-->
+    </div><!--CONTAINER-->
+  </div><!--INFO-BLOCK-->
+</div><!--CONTAINER-BLOCK-->
