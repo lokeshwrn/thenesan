@@ -6,7 +6,7 @@ a:hover, a:focus{text-decoration:none;}
 /*body{font-size: 62.5%;background-color:#FFF;*//*font-family: 'IM Fell DW Pica', serif;font-family: 'Rancho', cursive;*//*font-family: 'Expletus Sans', cursive;*//*font-family: 'Exo 2', sans-serif;*//*}*/
 body{font-size: 62.5%;background-color:#FFF;font-family: 'Montserrat', sans-serif;}
 p{font-size:20px;color:#000;line-height:34px;margin-bottom:25px;font-family: 'Josefin Slab', serif;font-weight:400}
-h3{font-size:28px;font-weight:bold;text-align:center;margin:25px 0px 50px;text-transform:uppercase;text-shadow:2px 2px 1px #000;}
+h3{font-size:28px;font-weight:bold;text-align:center;margin:25px 0px 50px;text-transform:uppercase;/*text-shadow:2px 2px 1px #000;*/}
 h3.odd{color:#0066CC;}
 h3.even{color:#fff;}
 h3.odd a{color:#0066CC;border-bottom:3px solid #000;}
@@ -99,7 +99,7 @@ header{overflow:hidden;}
 .description-parent:hover .mini-desc span{height:100%;}
 
 /*INFO-BLOCK*/
-.info-block{padding:5% 0;}
+.article-block,.info-block{padding:5% 0;}
 .info-block.first{padding-top:2%;}
 .info-block h3.big{margin-bottom:6%;}
 .info-block.odd{background-color:#FFF;}
@@ -198,6 +198,49 @@ header{overflow:hidden;}
 
 .about-us-head{padding:1% 0 4%;}
 .about-us-head h4{padding: 1%;}
+
+
+/*FORM-BLOCK*/
+.form-block{padding:3% 0 4%;}
+.form-block h2{margin-bottom:3%;}
+
+.form-left{padding:2% 3% 0 4%;float:left;}
+.form-right{padding:2% 4% 0 3%;float:left;}
+.s_btn{text-align:right;width: 100%;}
+.s_btn button{background-color: #fff;border-bottom:2px double #38c2d4;display: inline-block;min-width:115px;}
+.form-group{margin-bottom:22px;}
+
+.form-black, .form-white {background-color: transparent;border: none;display: block;font-size: 14px;height: auto;line-height: 1.42587;padding: 6px;transition: border-color 0.15s ease-in-out 0s; width: 100%; letter-spacing: 2px;}
+.form-black{color: gray;border-bottom: 1px solid gray;}
+.form-black:focus{border-bottom: 1px solid #fff; color: #fff;}
+
+.form-white{color: #000;border-bottom: 1px solid lightgray; }
+.form-white:focus{border-bottom: 1px solid #000; color: #000;}
+
+.form--right, .form--left{width:46%; margin: 1%  2%; height: 50px;}
+.form--left{float: left;}
+.form--right{float: right;}
+.form--content{float: left;width: 96%; margin: 2%;}
+.align_center{text-align: center;}
+.new_article .btn,.form-block .btn{margin: 1% 2%;border:1px solid #000;font-weight:bold;text-transform:capitalize;letter-spacing:1px;color:#000;}
+.new_article .btn a{color:#000;}
+.new_article .btn:hover,.form-block .btn:hover{background-color:#0066cc;color:#FFF;}
+.new_article .btn:hover a{color:#FFF;}
+.form--right input{margin-top: 1%;}
+div.cs-skin-elastic{margin: 0 0 0 1%;font-size:15px;}
+.alert{font-size: 15px;text-align: center;}
+span.cs-placeholder{}
+
+div.mce-edit-area{min-height:350px;}
+
+.article-content{height:140px;margin: 2%;padding: 2%;}
+.article-content-true{border: 1px solid #30ca71;}
+.article-content-true h3,.article-content-true h3:hover{color:#30ca71;}
+.article-content-false{border: 1px solid #ff4d4d;}
+.article-content-false h3,.article-content-false h3:hover{color:#ff4d4d;}
+.article-list-block h3{margin:15px 0 30px;text-align:left;}
+
+.article-content p{color: #0066cc;font-size: 18px;margin: 0;padding-top: 20px;text-align: right;width: 100%;}
 
 /*FOOTER*/
 .footer{ background-color:#EEEFEF;  /*background: url('http://www.designbolts.com/wp-content/uploads/2012/12/White-wall-Seamless-Pattern-For-Website-Background.jpg');*/padding:4.5% 0 0;sss}
