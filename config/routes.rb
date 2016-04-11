@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   post 'articles' => 'admin#create_articles'
   patch 'articles' => 'admin#update_articles'
 
-
   get 'home/readmore'
   get 'home/summary'
 

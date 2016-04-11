@@ -1,0 +1,9 @@
+<ul class="breadcrumb">
+  <% @breadcrumb.each do |key,val| %>
+    <% if val!="#" %>
+      <li><a href="<%= val %>"><%= key.to_s.gsub('_',' ') %></a></li>
+    <% else %>
+      <li><%= key.to_s.gsub('_',' ') %></li>
+    <% end %>
+  <% end %>
+</ul>

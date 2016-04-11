@@ -229,7 +229,7 @@ header{overflow:hidden;}
 .form--right input{margin-top: 1%;}
 div.cs-skin-elastic{margin: 0 0 0 1%;font-size:15px;}
 .alert{font-size: 15px;text-align: center;}
-span.cs-placeholder{}
+span.cs-placeholder{text-transform: capitalize;}
 
 #article_content_ifr{min-height:350px;}
 

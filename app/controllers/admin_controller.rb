@@ -2,12 +2,13 @@ class AdminController < ApplicationController
 
   USER, PASSWORD = 'katomaran', 'thenesans'
 
-  before_filter :authentication_check, :except => [:index, :new_index, :show_articles]
+  before_filter :authentication_check
 
   def new_articles
     @articles = Article.new
     @page_properties = {:header => "Create New Article"}
     @validate = %w(title email institution parent_name)
+    render :template => 'admin/articles_form'
   end
 
   def create_articles
@@ -22,6 +23,7 @@ class AdminController < ApplicationController
   def edit_articles
     @articles = Article.find(params[:id])
     @page_properties = {:header => "Edit Article"}
+    render :template => 'admin/articles_form'
   end
 
   def update_articles
@@ -37,10 +39,6 @@ class AdminController < ApplicationController
   def list_articles
     @articles = Article.all.by_updated
     @page_properties = {:header => "Article Listing"}
-  end
-
-  def test_page
-
   end
 
   private
