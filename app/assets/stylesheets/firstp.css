@@ -231,7 +231,7 @@ div.cs-skin-elastic{margin: 0 0 0 1%;font-size:15px;}
 .alert{font-size: 15px;text-align: center;}
 span.cs-placeholder{}
 
-div.mce-edit-area{min-height:350px;}
+#article_content_ifr{min-height:350px;}
 
 .article-content{height:140px;margin: 2%;padding: 2%;}
 .article-content-true{border: 1px solid #30ca71;}

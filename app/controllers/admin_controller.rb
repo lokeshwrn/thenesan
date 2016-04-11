@@ -1,12 +1,13 @@
 class AdminController < ApplicationController
 
-  USER, PASSWORD = 'katomaran', 'robotics'
+  USER, PASSWORD = 'katomaran', 'thenesans'
 
   before_filter :authentication_check, :except => [:index, :new_index, :show_articles]
 
   def new_articles
     @articles = Article.new
     @page_properties = {:header => "Create New Article"}
+    @validate = %w(title email institution parent_name)
   end
 
   def create_articles
@@ -14,7 +15,7 @@ class AdminController < ApplicationController
     if @articles.save
       redirect_to list_articles_url
     else
-      render 'new_articles'
+      redirect_to :back
     end
   end
 
@@ -29,7 +30,7 @@ class AdminController < ApplicationController
     if @articles.save
       redirect_to list_articles_url
     else
-      render 'edit_articles'
+      redirect_to :back
     end
   end
 
@@ -45,7 +46,7 @@ class AdminController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:id, :title, :description, :content, :status, :alias_url, :img_url, :content_url, :article_type, :status, :sequence_number)
+    params.require(:article).permit(:id, :title, :description, :content, :status, :alias_url, :img_url, :content_url, :status, :sequence_number, :product_id)
   end
 
   def authentication_check

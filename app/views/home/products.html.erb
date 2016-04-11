@@ -1,0 +1,26 @@
+<div class="container-block col-md-12 col-sm-12 col-xs-12 no-padding">
+  <div class="summary-block col-md-12 col-sm-12 col-xs-12 no-padding">
+    <div class="container no-padding">
+      <div class="row no-margin">
+
+        <div class="content col-md-12 col-sm-12 col-xs-12 no-padding">
+          <h3 class="big odd"><a ><%= @product.name %></a></h3>
+
+          <div class="summary-text col-md-12 col-sm-12 col-xs-12 no-padding">
+            <div class="text-content col-md-12 col-sm-12 col-xs-12 no-padding">
+	            <%= raw @product.content %>
+            </div><!--TEXT-CONTENT-->
+            <!-- <img src=""> -->
+          </div><!--SUMMARY-TEXT-->
+
+        </div><!--CONTENT-->
+
+	      <% @articles.each do |x| %>
+	      <%= link_to x.title, "/products/#{@product.alias_url + "/" + x.alias_url}" %>
+	      <% end %>
+
+      </div><!--ROW-->
+    </div><!--CONTAINER-->
+  </div><!--SUMMARY-BLOCK-->
+
+</div><!--CONTAINER-BLOCK-->

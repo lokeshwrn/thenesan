@@ -1,30 +1,30 @@
 Rails.application.routes.draw do
 
-
-  get '/products', :to => 'home#products_page'
-  get '/about-us', :to => 'home#about_us'
-
   get 'home/index'
-  get 'home/readmore'
-  get 'home/aboutus'
 
-  get 'home/summary'
+  root 'home#index'
 
+  # site-side routes
+  get '/products', :to => 'home#products_listing'
+  get '/about-us', :to => 'home#about_us'
+  get '/products/:product_url', :to => 'home#products'
+  get '/products/:product_url/:article_url', :to => 'home#articles'
+
+  # admin-side routes
   get 'admin/articles', :to => 'admin#list_articles', :as => 'list_articles'
   get 'admin/articles/:id/edit', :to => 'admin#edit_articles', :as => 'edit_articles'
   get 'admin/articles/new', :to => 'admin#new_articles', :as => 'new_articles'
   post 'articles' => 'admin#create_articles'
   patch 'articles' => 'admin#update_articles'
 
+
+  get 'home/readmore'
+  get 'home/summary'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
-  # root 'home#readmore'
-  # root 'home#aboutus'
-  # root 'home#products_page'
-  # root 'home#summary'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

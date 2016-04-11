@@ -101,4 +101,18 @@
 	//			}
 	//		});
 	//	});
+
+	$(document).ready(function(){
+		if($(window).width() < 610){
+			$('.menu-icon').click(function () {
+				// var divname= this.name;
+				$('.menu').toggle("slide", { direction: "right" }, 500);
+			});
+			$('button.close').click(function () {
+				// var divname= this.name;
+				$('.menu').toggle("slide", { direction: "right" }, 500);
+			});
+		}
+
+	});
 </script>

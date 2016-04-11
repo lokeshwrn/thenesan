@@ -1,0 +1,32 @@
+<div class="container-block col-md-12 col-sm-12 col-xs-12 no-padding">
+  <div class="product-block col-md-12 col-sm-12 col-xs-12 no-padding">
+    <div class="container no-padding">
+      <div class="row no-margin">
+
+        <div class="content col-md-12 col-sm-12 col-xs-12 no-padding">
+
+          <% @products.each_slice(2).each do |products|%>
+
+            <div class="product-content col-md-12 col-sm-12 col-xs-12 no-padding">
+              <% products.each do |product|%>
+
+                <div class="product-parent col-md-6 col-sm-6 col-xs-6 no-padding">
+                  <div class="product col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <div class="image-content col-md-12 col-sm-12 col-xs-12 no-padding">
+                      <a href="/products/<%= product.alias_url %>"><img src="<%= product.img_url%>" alt="product-img" class="img-responsive"></a>
+                      <a href="/products/<%= product.alias_url %>" class="text-content">
+                        <span><%= product.name %></span> </a>
+                    </div><!--IMAGE-CONTENT-->
+                  </div><!--PRODUCT-->
+                </div><!--PRODUCT-PARENT-->
+              <% end %>
+            </div><!--PRODUCT-CONTENT-->
+          <% end %>
+
+        </div><!--CONTENT-->
+
+      </div><!--ROW-->
+    </div><!--CONTAINER-->
+  </div><!--PRODUCT-BLOCK-->
+
+</div><!--CONTAINER-BLOCK-->
