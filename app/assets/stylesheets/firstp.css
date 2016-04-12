@@ -192,6 +192,7 @@ header{overflow:hidden;}
 /*SUMMARY-BLOCK*/
 .summary-block{padding:4% 0;}
 .summary-block p{color:#000;}
+.summary-block p span{font-size:20px!important;}
 .summary-block h3.big{text-align:center;}
 .summary-block h4{font-size:30px;color:#000;text-align:left;}
 .summary-block h4 a{color:#000;}
@@ -370,7 +371,9 @@ span.cs-placeholder{text-transform: capitalize;}
     .description-block{padding:5% 0 7%;}
     .description-content{text-align:center;}
     .description-parent{width:48.5%;float:none;display:inline-block;vertical-align:top;margin-top:20px;min-height:200px;}
-
+	
+	.summary-block p span{font-size:16px!important;}
+	
 	.footer{padding:6% 0 0;}
 	.footer-top{padding-bottom:6%;}
 	.footer-top h4{color:#000;}
@@ -403,6 +406,8 @@ span.cs-placeholder{text-transform: capitalize;}
     .time-block .time-icon{padding-left:4%;padding-right:3%;}
     .time-block.keep-right .time-icon{padding-left:4%;padding-right:3%;}
 
+	.summary-block p span{font-size:15px!important;}
+	
 	.footer{padding:12% 0 0;}
 	.footer-top{padding-bottom:12%;}
 	.footer-bottom{padding:13% 0 10%;}
