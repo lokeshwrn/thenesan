@@ -39,6 +39,9 @@ h2 a:focus, a:hover{color:#0066CC;}
 /*header{background-color:}*/
 
 header{overflow:hidden;}
+
+.breadcrumb > li {font-size: 12px;}
+
 /*HEADER-TOP*/
 .header-top{padding:5px 0px 10px;background-color:#fff;opacity:0.8;z-index:10;}
 .logo img{height:80px;float:left;}
@@ -192,7 +195,7 @@ header{overflow:hidden;}
 /*SUMMARY-BLOCK*/
 .summary-block{padding:4% 0;}
 .summary-block p{color:#000;}
-.summary-block p span{font-size:20px!important;}
+.summary-block p span{font-size:20px!important;line-height: 34px!important;}
 .summary-block h3.big{text-align:center;}
 .summary-block h4{font-size:30px;color:#000;text-align:left;}
 .summary-block h4 a{color:#000;}
@@ -372,7 +375,7 @@ span.cs-placeholder{text-transform: capitalize;}
     .description-content{text-align:center;}
     .description-parent{width:48.5%;float:none;display:inline-block;vertical-align:top;margin-top:20px;min-height:200px;}
 	
-	.summary-block p span{font-size:16px!important;}
+	.summary-block p span{font-size:16px!important;line-height: 30px!important;}
 	
 	.footer{padding:6% 0 0;}
 	.footer-top{padding-bottom:6%;}
