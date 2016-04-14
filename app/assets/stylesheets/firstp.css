@@ -86,8 +86,8 @@ header{overflow:hidden;}
 
 /*.container-block{background-color:#000;}*/
 .intro-block{/*padding:5% 0;background-color:#999999;*//*background-color:rgba(0, 102, 204, 0.8);*/}
-.intro-block .content{background-color:rgba(0, 102, 204, 0.8);padding:4% 2% 5%;}
-.intro-block p{line-height:34px;text-align:justify;}
+.intro-block .content{/* background-color:rgba(0, 102, 204, 0.8); */padding:4% 2% 5%;}
+.intro-block p{line-height:34px;text-align:justify;color:#000;}
 
 /*DESCRIPTION-BLOCK*/
 .description-block{padding:5% 0 1%;}
@@ -194,7 +194,7 @@ header{overflow:hidden;}
 
 /*SUMMARY-BLOCK*/
 .summary-block{padding:4% 0;}
-.summary-block p{color:#000;}
+.summary-block p{color:#000;font-size:20px!important;}
 .summary-block p span{font-size:20px!important;line-height: 34px!important;}
 .summary-block h3.big{text-align:center;}
 .summary-block h4{font-size:30px;color:#000;text-align:left;}
@@ -242,7 +242,7 @@ span.cs-placeholder{text-transform: capitalize;}
 .article-content-true h3,.article-content-true h3:hover{color:#30ca71;}
 .article-content-false{border: 1px solid #ff4d4d;}
 .article-content-false h3,.article-content-false h3:hover{color:#ff4d4d;}
-.article-list-block h3{margin:15px 0 30px;text-align:left;}
+.article-list-block h3{margin:8px 0 25px;text-align:left;font-size:22px;}
 
 .article-content p{color: #0066cc;font-size: 18px;margin: 0;padding-top: 20px;text-align: right;width: 100%;}
 
