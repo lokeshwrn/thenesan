@@ -4,8 +4,8 @@ img{border:none;}   /*#E6C40A*/
 a:hover, a:focus{text-decoration:none;}
 
 /*body{font-size: 62.5%;background-color:#FFF;*//*font-family: 'IM Fell DW Pica', serif;font-family: 'Rancho', cursive;*//*font-family: 'Expletus Sans', cursive;*//*font-family: 'Exo 2', sans-serif;*//*}*/
-body{font-size: 62.5%;background-color:#FFF;font-family: 'Montserrat', sans-serif;}
-p{font-size:20px;color:#000;line-height:34px;margin-bottom:25px;font-family: 'Josefin Slab', serif;font-weight:400}
+body{font-size: 62.5%;background-color:#FFF;font-family: 'Open Sans', sans-serif;}
+p{font-size:18px;color:#000;line-height:34px;margin-bottom:25px;font-family: 'Open Sans', sans-serif;;font-weight:300}
 h3{font-size:28px;font-weight:bold;text-align:center;margin:25px 0px 50px;text-transform:uppercase;/*text-shadow:2px 2px 1px #000;*/}
 h3.odd{color:#0066CC;}
 h3.even{color:#fff;}
@@ -169,11 +169,15 @@ header{overflow:hidden;}
 
 /*SUMMARY-BLOCK*/
 .summary-block{padding:4% 0;}
-.summary-block p{color:#000;font-size:20px!important;}
-.summary-block p span{font-size:20px!important;line-height: 34px!important;}
+.summary-block p, .summary-block li{color:#000;font-size:18px!important;font-weight: 300!important;}
+.summary-block li{padding-left: 15px;}
+.summary-block p span{font-size:18px!important;line-height: 34px!important;}
 .summary-block h3.big{text-align:center;}
 .summary-block h4{font-size:30px;color:#000;text-align:left;}
 .summary-block h4 a{color:#000;}
+.summary-block table { border: 1px solid; margin: 0 auto; width: 80%; }
+.summary-block td{text-align: center; border: 1px solid;padding: 5px 0;}
+.summary-block td p{margin: 0}
 
 .about-us-head{padding:1% 0 4%;}
 .about-us-head h4{padding: 1%;}
