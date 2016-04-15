@@ -37,7 +37,7 @@ class AdminController < ApplicationController
   end
 
   def list_articles
-    @articles = Article.all.by_updated
+    @articles = Article.all.by_updated.sort{|x,y| x.product.name <=> y.product.name}
     @page_properties = {:header => "Article Listing"}
   end
 

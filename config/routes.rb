@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   # site-side routes
   get '/products', :to => 'home#products_listing'
   get '/about-us', :to => 'home#about_us'
+  get '/contact-us', :to => 'home#contact_us'
+  get '/nesan-oem', :to => 'home#nesan_oem'
+  get '/spares', :to => 'home#spares'
+  get '/showroom', :to => 'home#showroom'
   get '/products/:product_url', :to => 'home#products'
   get '/products/:product_url/:article_url', :to => 'home#articles'
 
