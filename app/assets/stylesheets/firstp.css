@@ -272,7 +272,7 @@ span.cs-placeholder{text-transform: capitalize;}
 
 .footer-top{padding-bottom:2.5%;}
 .footer-top .footer-content .col-md-4{padding:0px 3.5%;}
-.footer-top h4{border-top:1px groove #ffffff;border-bottom:2px groove #eeefef;padding:18px 0px 10px;margin-bottom:25px;text-align:center;color:#fff;font-size:18px;letter-spacing:1px;word-spacing:5px;font-family: Josefin Slab;font-weight: bold;}
+.footer-top h4{border-bottom:2px groove #eeefef;padding:18px 0px 10px;margin-bottom:25px;text-align:center;color:#fff;font-size:18px;letter-spacing:1px;word-spacing:5px;font-family: Josefin Slab;font-weight: bold;}
 .footer-top ul{padding-left:8%;text-align:left;}
 .footer-top  ul li{font-size:16px;margin-bottom:6px;}
 .footer-top ul li a{color:#fff;font-family: "Josefin Slab",serif;font-size: 18px;transition:all 0.2s linear;}
