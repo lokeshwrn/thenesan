@@ -233,8 +233,11 @@ span.cs-placeholder{text-transform: capitalize;}
 .footer-top{padding-bottom:2.5%;}
 .footer-top .footer-content .col-md-4{padding:0px 3.5%;}
 .footer-top h4{border-top:1px groove #ffffff;border-bottom:2px groove #eeefef;padding:18px 0px 10px;margin-bottom:25px;text-align:center;color:#8C8C8C;font-size:18px;letter-spacing:1px;word-spacing:5px;font-family: Josefin Slab;font-weight: bold;}
-.footer-top  ul li{font-size:16px;}
+.footer-top ul{padding-left:8%;text-align:left;}
+.footer-top  ul li{font-size:16px;margin-bottom:6px;}
 .footer-top ul li a{color:#8C8C8C;font-family: "Josefin Slab",serif;font-size: 18px;}
+.footer-top ul li:hover a{color:#333;}
+.footer-top ul li:hover{cursor: pointer;}
 
 .contact-us input{margin-bottom:10px;border:none;border-bottom:1px solid;background:transparent;}
 .contact-us input:focus{background: #fff;box-shadow:none;}
@@ -244,7 +247,7 @@ span.cs-placeholder{text-transform: capitalize;}
 .contact-us .submit-btn input{font-size:14px;float:none;display:inline-block;padding:5px 5px 3px;min-width:120px;}
 .contact-us input .form-control:focus{box-shadow:none;}
 
-.social-link ul{padding-left:8%;text-align:left;}
+.social-link ul{padding-left:8%;}
 .social-link ul li{margin-bottom:12px;}
 .social-link ul li:hover a{color:#333;}
 .social-link ul li:hover{cursor: pointer;}
