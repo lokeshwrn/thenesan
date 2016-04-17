@@ -55,42 +55,58 @@
     </div><!--CONTAINER-->
   </div><!--MENUBLOCK-->
 
-  <div class="banner col-md-12 col-sm-12 col-xs-12 no-padding">
-    <div class="flexslider">
-      <ul class="slides">
-        <li>
-          <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
-          <div class="banner-content wow bounceInUp" data-wow-delay="2s">
-            <h2><a href="#nogo">Cras convallis</a></h2>
-          </div><!--BANNER-CONTENT-->
-        </li>
-        <li>
-          <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127633/thenesans/2.png" class="img-responsive" alt="banner">
-          <div class="banner-content wow bounceInUp" data-wow-delay="2s">
-            <h2><a href="#nogo">Cras convallis</a></h2>
-          </div><!--BANNER-CONTENT-->
-        </li>
-        <li>
-          <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
-          <div class="banner-content wow bounceInUp" data-wow-delay="2s">
-            <h2><a href="#nogo">Cras convallis</a></h2>
-          </div><!--BANNER-CONTENT-->
-        </li>
-        <li>
-          <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127633/thenesans/2.png" class="img-responsive" alt="banner">
-          <div class="banner-content wow bounceInUp" data-wow-delay="2s">
-            <h2><a href="#nogo">Cras convallis</a></h2>
-          </div><!--BANNER-CONTENT-->
-        </li>
-        <li>
-          <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
-          <div class="banner-content wow bounceInUp" data-wow-delay="2s">
-            <h2><a href="#nogo">Cras convallis</a></h2>
-          </div><!--BANNER-CONTENT-->
-        </li>
-      </ul>
-    </div>
-  </div><!--BANNER-BLOCK-->
+  <% if @page_properties %>
 
+    <div class="banner col-md-12 col-sm-12 col-xs-12 no-padding">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
+            <div class="banner-content wow bounceInUp" data-wow-delay="2s">
+              <h2><a href="#nogo">Cras convallis</a></h2>
+            </div><!--BANNER-CONTENT-->
+          </li>
+          <li>
+            <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127633/thenesans/2.png" class="img-responsive" alt="banner">
+            <div class="banner-content wow bounceInUp" data-wow-delay="2s">
+              <h2><a href="#nogo">Cras convallis</a></h2>
+            </div><!--BANNER-CONTENT-->
+          </li>
+          <li>
+            <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
+            <div class="banner-content wow bounceInUp" data-wow-delay="2s">
+              <h2><a href="#nogo">Cras convallis</a></h2>
+            </div><!--BANNER-CONTENT-->
+          </li>
+          <li>
+            <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127633/thenesans/2.png" class="img-responsive" alt="banner">
+            <div class="banner-content wow bounceInUp" data-wow-delay="2s">
+              <h2><a href="#nogo">Cras convallis</a></h2>
+            </div><!--BANNER-CONTENT-->
+          </li>
+          <li>
+            <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
+            <div class="banner-content wow bounceInUp" data-wow-delay="2s">
+              <h2><a href="#nogo">Cras convallis</a></h2>
+            </div><!--BANNER-CONTENT-->
+          </li>
+        </ul>
+      </div>
+
+    </div><!--BANNER-BLOCK-->
+  <% else %>
+    <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
+        <ul class="list-unstyled">
+          <li>
+            <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
+            <div class="banner-content wow bounceInUp" data-wow-delay="2s">
+              <h2><a href="#nogo">Cras convallis</a></h2>
+            </div><!--BANNER-CONTENT-->
+          </li>
+        </ul>
+      </div>
+
+    </div><!--BANNER-BLOCK-->
+  <% end %>
 
 </header>

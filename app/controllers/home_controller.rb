@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
+
   def index
+    @page_properties = {:carousel => true }
   end
 
   def readmore

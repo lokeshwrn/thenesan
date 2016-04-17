@@ -81,8 +81,13 @@ header{overflow:hidden;}
 .banner .flex-direction-nav li a.flex-next{background:url("/image/right-arrow.png") no-repeat scroll 0 0;right:2%;background-size:100% 100%;    }
 .banner .slides li{position:relative;}
 
-.banner-content{width:100%;float:left;position:absolute;top:15%;padding:2% 15%;}
+.banner-content{width:100%;float:left;position:absolute;top:15%;padding:2% 15%;display:none;}
 .banner-content h2{color:#FFF;font-size:50px;font-weight:bold;text-transform:uppercase;text-align:left;}
+
+.banner-without-slide{height:300px;}
+.banner-without-slide ul{margin-bottom:0;}
+.banner-without-slide ul li{text-align:center;}
+.banner-without-slide ul li img{margin:0px auto; width: 100%;}
 
 /*.container-block{background-color:#000;}*/
 .intro-block{/*padding:5% 0;background-color:#999999;*//*background-color:rgba(0, 102, 204, 0.8);*/}
@@ -135,6 +140,37 @@ header{overflow:hidden;}
 .info-block .img-hover{overflow:hidden;}
 .info-block .img-hover:hover img{transform:scale(1.2,1.2);}
 
+
+/*CONTACT-BLOCK*/
+.contact-block{padding:4% 0;}
+.contact-block p{color:#000;}
+.contact-block h4{margin-bottom:20px;font-size:26px;}
+.contact-block h4 a{color:#000;}
+.contact-form{padding-top:2%;}
+.contact-form h4{margin-bottom:30px;}
+.contact-form p{height:50px;}
+.contact-form input,.contact-form textarea{width:100%;border:1px solid transparent;border-bottom:1px solid lightgrey;}
+.contact-form .form-white{display:inline-block;}
+.contact-left h4{text-align:right;}
+.contact-left,.contact-right{padding:0 5%;min-height:745px;}
+.contact-right h4{text-align:left;}
+.contact-form .button_input{padding-top:6%;text-align:center;}
+.contact-form .button_input .btn{border: 1px solid #000;color: #000;font-weight: bold;letter-spacing: 1px;margin: 1% 2%;text-transform: capitalize;}
+.contact-form .button_input .btn:hover,.contact-form .button_input .btn:focus{background-color: #0066cc;color: #fff;}
+.contact-form .button_input.single{padding-top:35%;display:none;}
+.contact-form h4 {text-transform: capitalize; text-decoration: underline;}
+
+.contact-content{padding:10% 0 2%;}
+.contact-content p span{font-weight:bold;display:inline-block;width:25%;}
+.contact-content ul{text-align:center;}
+.contact-content ul li{font-size:25px;color:#333;display:inline-block;padding:0 15px;}
+.contact-content ul li span{transition:all 0.2s ease-in;}
+.contact-content ul li a{color:#333;}
+.contact-content ul li:hover a{color:#999;}
+.contact-content ul li:hover span{transform:scale(1.2,1.2);}
+
+.contact-content .contact-left,.contact-content .contact-right{min-height:0;}
+
 /*TIMELINE-BLOCK*/
 .timeline-block{padding:5% 0 5%;}
 .timeline{border-radius:5px;}
@@ -155,17 +191,21 @@ header{overflow:hidden;}
 .time-block .time-icon span{background-color:#000;color:#0066CC;border-radius:50%;font-size:45px;padding-left:1px;padding-top:1px;}
 
 /*PRODUCT-BLOCK*/
-.product-block{min-height:400px;background-color:lightgrey;padding:3% 0;}
+.product-block{min-height:400px;background-color:#FFF;padding:3% 0;}
 .product-content{margin-bottom:7%;}
 .product-content:last-child{margin-bottom:0;}
+.product-without-slide{text-align:center;}
+.product-without-slide .product-parent{float:none;display:inline-block;vertical-align:top;}
 .product-parent{padding:0 5%;}
 .product{position:relative;overflow:hidden;}
 .product .img-content{min-height:500px;}
-.product .text-content{display:block;width:100%;height:100%;position:absolute;left:0;top:100%;padding:10% 5%;top:0;color:#000;font-size:24px;line-height:24px;opacity:0.6;}
-.product .text-content span{position:absolute;right:10%;bottom:10%;}
+.product .text-content{display:block;width:100%;height:100%;position:absolute;left:0;top:100%;padding:10% 5%;top:0;color:#000;font-size:24px;line-height:24px;opacity:0.6;transition:all 0.2s linear;}
+.product .text-content span{position:absolute;right:10%;bottom:10%;transition:all 0.4s ease-in;width:auto;}
 .product-parent:last-child .product .text-content span{position:absolute;left:10%;bottom:10%;}
 
-.product-parent:hover .product .text-content{background-color:#FFF;}
+.product:hover .text-content{background-color:#FFF;}
+.product:hover .text-content span{font-weight:bold;/*transform:scale(1.3,1.3);left:15%;*/padding-right:5%;}
+.product-parent:last-child .product:hover .text-content span{/*right:14%;left:auto;*/padding-left:5%;}
 
 /*SUMMARY-BLOCK*/
 .summary-block{padding:4% 0;}
@@ -173,7 +213,7 @@ header{overflow:hidden;}
 .summary-block li{padding-left: 15px;}
 .summary-block p span{font-size:18px!important;line-height: 34px!important;}
 .summary-block h3.big{text-align:center;}
-.summary-block h4{font-size:30px;color:#000;text-align:left;}
+.summary-block h4{font-size:30px;color:#000;text-align:left;padding-bottom: 15px;}
 .summary-block h4 a{color:#000;}
 .summary-block table { border: 1px solid; margin: 0 auto; width: 80%; }
 .summary-block td{text-align: center; border: 1px solid;padding: 5px 0;}
@@ -226,30 +266,30 @@ span.cs-placeholder{text-transform: capitalize;}
 .article-content p{color: #0066cc;font-size: 18px;margin: 0;padding-top: 20px;text-align: right;width: 100%;}
 
 /*FOOTER*/
-.footer{ background-color:#EEEFEF;  /*background: url('http://www.designbolts.com/wp-content/uploads/2012/12/White-wall-Seamless-Pattern-For-Website-Background.jpg');*/padding:4.5% 0 0;}
+.footer{ background-color:#666;  /*background: url('http://www.designbolts.com/wp-content/uploads/2012/12/White-wall-Seamless-Pattern-For-Website-Background.jpg');*/padding:4.5% 0 0;}
 .footer p{color:#8C8C8C; font-size: 16px;}
 .footer.no-shadow{box-shadow:none;-moz-box-shadow:none;-webkti-box-shadow:none;}
 
 .footer-top{padding-bottom:2.5%;}
 .footer-top .footer-content .col-md-4{padding:0px 3.5%;}
-.footer-top h4{border-top:1px groove #ffffff;border-bottom:2px groove #eeefef;padding:18px 0px 10px;margin-bottom:25px;text-align:center;color:#8C8C8C;font-size:18px;letter-spacing:1px;word-spacing:5px;font-family: Josefin Slab;font-weight: bold;}
+.footer-top h4{border-top:1px groove #ffffff;border-bottom:2px groove #eeefef;padding:18px 0px 10px;margin-bottom:25px;text-align:center;color:#fff;font-size:18px;letter-spacing:1px;word-spacing:5px;font-family: Josefin Slab;font-weight: bold;}
 .footer-top ul{padding-left:8%;text-align:left;}
 .footer-top  ul li{font-size:16px;margin-bottom:6px;}
-.footer-top ul li a{color:#8C8C8C;font-family: "Josefin Slab",serif;font-size: 18px;}
-.footer-top ul li:hover a{color:#333;}
+.footer-top ul li a{color:#fff;font-family: "Josefin Slab",serif;font-size: 18px;transition:all 0.2s linear;}
+.footer-top ul li:hover a{color:#fff;padding-left:15px;border-left:1px solid #FFF;}
 .footer-top ul li:hover{cursor: pointer;}
 
-.contact-us input{margin-bottom:10px;border:none;border-bottom:1px solid;background:transparent;}
-.contact-us input:focus{background: #fff;box-shadow:none;}
-.contact-us textarea{margin-bottom:10px;border:none;border-bottom:1px solid;background:transparent;}
-.contact-us textarea:focus{background: #fff;box-shadow:none;}
-.contact-us .submit-btn{width:100%;float:left;text-align:right;}
-.contact-us .submit-btn input{font-size:14px;float:none;display:inline-block;padding:5px 5px 3px;min-width:120px;}
-.contact-us input .form-control:focus{box-shadow:none;}
+/*.contact-us input{margin-bottom:10px;border:none;border-bottom:1px solid;background:transparent;}*/
+/*.contact-us input:focus{background: #fff;box-shadow:none;}*/
+/*.contact-us textarea{margin-bottom:10px;border:none;border-bottom:1px solid;background:transparent;}*/
+/*.contact-us textarea:focus{background: #fff;box-shadow:none;}*/
+/*.contact-us .submit-btn{width:100%;float:left;text-align:right;}*/
+/*.contact-us .submit-btn input{font-size:14px;float:none;display:inline-block;padding:5px 5px 3px;min-width:120px;}*/
+/*.contact-us input .form-control:focus{box-shadow:none;}*/
 
 .social-link ul{padding-left:8%;}
 .social-link ul li{margin-bottom:12px;}
-.social-link ul li:hover a{color:#333;}
+.social-link ul li:hover a{color:#999;padding-left:0px;border-left:none;}
 .social-link ul li:hover{cursor: pointer;}
 .social-link ul li img{border-radius:50%;border:2px solid transparent;}
 .social-link ul li img:hover{border:2px solid #0066CC;}
