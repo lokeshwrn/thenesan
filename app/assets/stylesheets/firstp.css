@@ -266,19 +266,20 @@ span.cs-placeholder{text-transform: capitalize;}
 .article-content p{color: #0066cc;font-size: 18px;margin: 0;padding-top: 20px;text-align: right;width: 100%;}
 
 /*FOOTER*/
-.footer{ background-color:#666;  /*background: url('http://www.designbolts.com/wp-content/uploads/2012/12/White-wall-Seamless-Pattern-For-Website-Background.jpg');*/padding:4.5% 0 0;}
+.footer{ background-color:#474747;  /*background: url('http://www.designbolts.com/wp-content/uploads/2012/12/White-wall-Seamless-Pattern-For-Website-Background.jpg');*/padding:4.5% 0 0;}
 .footer p{color:#8C8C8C; font-size: 16px;}
 .footer.no-shadow{box-shadow:none;-moz-box-shadow:none;-webkti-box-shadow:none;}
 
-.footer-top{padding-bottom:2.5%;}
+.footer-top{padding-bottom:1%;}
 .footer-top .footer-content .col-md-4{padding:0px 3.5%;}
 .footer-top h4{border-bottom:2px groove #eeefef;padding:18px 0px 10px;margin-bottom:25px;text-align:center;color:#fff;font-size:18px;letter-spacing:1px;word-spacing:5px;font-family: Josefin Slab;font-weight: bold;}
 .footer-top ul{padding-left:8%;text-align:left;}
 .footer-top  ul li{font-size:16px;margin-bottom:6px;}
-.footer-top ul li a{color:#fff;font-family: "Josefin Slab",serif;font-size: 18px;transition:all 0.2s linear;}
+.footer-top ul li a{color:#ddd;font-family: "Josefin Slab",serif;font-size: 18px;transition:all 0.2s linear;}
 .footer-top ul li:hover a{color:#fff;padding-left:15px;border-left:1px solid #FFF;}
 .footer-top ul li:hover{cursor: pointer;}
-.footer-content > p { border-bottom: 1px solid; margin: 5px auto 25px!important; padding-bottom: 10px; text-align: center;}
+/*.footer-content > p { border-bottom: 1px solid; margin: 5px auto 25px!important; padding-bottom: 10px; text-align: center;}*/
+.footer-bottom .footer-content { border-top: 1px solid lightgray; padding-top: 25px;}
 
 /*.contact-us input{margin-bottom:10px;border:none;border-bottom:1px solid;background:transparent;}*/
 /*.contact-us input:focus{background: #fff;box-shadow:none;}*/
@@ -296,10 +297,10 @@ span.cs-placeholder{text-transform: capitalize;}
 .social-link ul li img:hover{border:2px solid #0066CC;}
 .social-link ul li span{margin-right:5px;font-size:20px;width:20px;top:2px;text-align:center;}
 
-.footer-bottom { background-color:#373737; /*background: url('http://www.ilikewallpaper.net/iphone-5-wallpapers/download/5641/Hexagons-Block-iphone-5-wallpaper-ilikewallpaper_com_200.jpg');*/padding:1.5% 0;}
+.footer-bottom { /*background-color:#373737; background: url('http://www.ilikewallpaper.net/iphone-5-wallpapers/download/5641/Hexagons-Block-iphone-5-wallpaper-ilikewallpaper_com_200.jpg');*/padding:1.5% 0;}
 .footer-menu{float:right;}
-.footer-bottom p{color:#8C8C8C;margin-bottom:0;font-size:16px;}
-.footer-bottom p span{color:#0066CC;font-weight:bold;}
+.footer-bottom p{color:#999;margin-bottom:0;font-size:16px;}
+.footer-bottom p span{color:#fff;font-weight:bold;}
 .footer-menu ul{margin:0;text-align:right;}
 .footer-menu ul li{font-size:14px;font-weight:normal;margin:5px 10px;}
 .footer-menu li a{color:#ccc;padding:10px 5px 5px;position:relative;}
