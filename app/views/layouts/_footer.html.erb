@@ -58,7 +58,7 @@
       <div class="row no-margin">
 
         <div class="footer-content col-md-12 col-sm-12 col-xs-12 no-padding">
-          <p>&#169; <span>THE NESANS OEM,</span> PVT LTD </p>
+          <p>&#169; <span>THE NESANS OEM,</span> PVT LTD. All Rights Reserved </p>
 
           <div class="footer-menu col-md-8 col-sm-8 col-xs-12 no-padding">
             <ul class="list-inline">
@@ -82,6 +82,25 @@
 </div><!--FOOTER-->
 
 <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<script>
+
+	jQuery.fn.extend({
+		disableSelection : function() {
+			return this.each(function() {
+				this.onselectstart = function() { return false; };
+				this.unselectable = "on";
+				jQuery(this).css('user-select', 'none');
+				jQuery(this).css('-o-user-select', 'none');
+				jQuery(this).css('-moz-user-select', 'none');
+				jQuery(this).css('-khtml-user-select', 'none');
+				jQuery(this).css('-webkit-user-select', 'none');
+			});
+		}
+	});
+
+	$('body').disableSelection();
+
+</script>
 <script>
 	$(window).load(function() {
 		$('.flexslider').flexslider({
