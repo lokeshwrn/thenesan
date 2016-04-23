@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   def set_page_properties
     @page_properties = {}
+    @validate = %w(name email company budget start_date)
   end
 
 end

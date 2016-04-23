@@ -20,27 +20,47 @@
 							<div class="contact-left col-md-6 col-sm-6 col-xs-12 no-padding">
 							  <div class="contact-left-form col-md-12 col-sm-12 col-xs-12 no-padding">
 									<h4>Project Enquiry</h4>
+							    <%= form_tag("/submit_enquiry", method: "post", multipart: true, id: "validate_form") do |f| %>
 
-								  <p><input type="text" value="" placeholder="Name" class="form-white"></p>
+							      <p>
+							        <%= text_field_tag 'name', nil, {class: "form-white", :placeholder => "Name *"} %>
+							      </p>
 
-								  <p><input type="text" value="" placeholder="Email" class="form-white"></p>
+							      <p>
+							        <%= text_field_tag 'email', nil, class: "form-white", :placeholder => "Email *" %>
+							      </p>
 
-								  <p><input type="text" value="" placeholder="Company" class="form-white"></p>
+							      <p>
+							        <%= text_field_tag 'company', nil, class: "form-white", :placeholder => "Company *" %>
+							      </p>
 
-								  <p><input type="text" value="" placeholder="Website" class="form-white"></p>
+							      <p>
+							        <%= text_field_tag 'website', nil, class: "form-white", :placeholder => "Website" %>
+							      </p>
 
-								  <p><input type="text" value="" placeholder="Budget" class="form-white"></p>
+							      <p>
+							        <%= text_field_tag 'budget', nil, class: "form-white", :placeholder => "Budget *" %>
+							      </p>
 
-								  <p><input type="text" value="" placeholder="Expected date of Start of Work" class="form-white"></p>
+							      <p>
+							        <%= text_field_tag 'start_date', nil, class: "form-white", :placeholder => "Expected date of Start of Work *" %>
+							      </p>
 
-								  <p><input type="text" value="" placeholder="Expected Project Schedule" class="form-white"></p>
+							      <p>
+							        <%= text_field_tag 'schedule', nil, class: "form-white", :placeholder => "Expected Project Schedule" %>
+							      </p>
 
-								  <p><textarea type="text" value="" rows="2" placeholder="Tell us about your project" class="form-white"></textarea></p>
+							      <p>
+							        <%= text_area_tag 'tell_us_more', nil, class: "form-white", :placeholder => "Tell us about your project", :rows => 3 %>
+							      </p>
 
-									<div class="button_input col-md-12 col-sm-12 col-xs-12">
-									  <button class="btn" value="" name="commit">Kick Start Your Project</button>
-									</div><!--BUTTON_INPUT-->
-								</div><!--CONTACT-LEFT-FORM-->
+							      <div class="button_input col-md-12 col-sm-12 col-xs-12">
+							        <button class="btn" value="" name="commit">Kick Start Your Project</button>
+							      </div><!--BUTTON_INPUT-->
+
+							    <% end %>
+
+							  </div><!--CONTACT-LEFT-FORM-->
 
 							  <div class="button_input single col-md-12 col-sm-12 col-xs-12">
 							    <button class="btn" value="" name="commit">Submit Another Form</button>
@@ -66,7 +86,7 @@
 
 		              <p><input type="text" value="" placeholder="Expected Project Schedule" class="form-white"></p>
 
-		              <p><textarea type="text" value="" rows="2" placeholder="Tell us your expectations" class="form-white"></textarea></p>
+		              <p><textarea type="text" value="" rows="3" placeholder="Tell us your expectations" class="form-white"></textarea></p>
 
 		              <div class="button_input col-md-12 col-sm-12 col-xs-12">
 		                <button class="btn" value="" name="commit">Submit My Machine</button>
@@ -119,3 +139,26 @@
   </div><!--SUMMARY-BLOCK-->
 
 </div><!--CONTAINER-BLOCK-->
+
+<script>
+	$('#validate_form button').click(function(e){
+		$('#validate_form input').each(function(){
+			var val = $(this).attr('id');
+			var ary = <%=raw @validate %>;
+			if(($.inArray(val, ary))>=0){
+				if($(this).val() == ''){
+					var self = $(this), activatedClass = 'validate-err btn-error';
+					error_shake(self, activatedClass, 4000);
+					e.preventDefault();
+				}
+			}
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function () {
+		$('#datetimepicker11').datetimepicker({
+			daysOfWeekDisabled: [0, 6]
+		});
+	});
+</script>
