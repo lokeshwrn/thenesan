@@ -27,6 +27,7 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = false
   config.assets.css_compressor = :sass
+  config.assets.js_compressor = :uglifier
   config.assets.compile = true
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
