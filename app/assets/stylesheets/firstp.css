@@ -384,7 +384,7 @@ span.cs-placeholder{text-transform: capitalize;}
 	
 	.logo{padding:0 10px;text-align:center;}
     .logo img{float:none;margin:0px auto;}
-	.social-icon{padding:15px 10px 0;position:relative;bottom:-33px;z-index:100;width:40%;float:right;}
+	.social-icon{padding:15px 10px 0;position:relative;bottom:-33px;z-index:100;width:45%;float:right;}
     .social-icon ul{margin-bottom: 0;}
 	.menu{display:none;}
     .menublock{padding-top: 0;z-index:10;background-color:transparent;}
