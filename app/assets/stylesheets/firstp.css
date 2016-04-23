@@ -174,8 +174,8 @@ header{overflow:hidden;}
 .contact-left,.contact-right{padding:0 5%;min-height:745px;}
 .contact-right h4{text-align:left;}
 .contact-form .button_input{padding-top:6%;text-align:center;}
-.contact-form .button_input .btn{border: 1px solid #000;color: #000;font-weight: bold;letter-spacing: 1px;margin: 1% 2%;text-transform: capitalize;}
-.contact-form .button_input .btn:hover,.contact-form .button_input .btn:focus{background-color: #0066cc;color: #fff;}
+.contact-form .button_input .btn{border: 1px solid #0080ff;color: #004080;letter-spacing: 1px;margin: 1% 2%;text-transform: capitalize;padding: 3% 6%;font-size: 12px;background-color: transparent;font-weight: 400;}
+.contact-form .button_input .btn:hover,.contact-form .button_input .btn:focus{background-color: #80bfff;color: #fff;}
 .contact-form .button_input.single{padding-top:35%;display:none;}
 .contact-form h4 {text-transform: capitalize; text-decoration: underline;}
 
@@ -185,7 +185,7 @@ header{overflow:hidden;}
 .contact-content ul li{font-size:25px;color:#333;display:inline-block;padding:0 15px;}
 .contact-content ul li span{transition:all 0.2s ease-in;}
 .contact-content ul li a{color:#333;}
-.contact-content ul li:hover a{color:#999;}
+.contact-content ul li:hover a{color:#0080ff;}
 .contact-content ul li:hover span{transform:scale(1.2,1.2);}
 
 .contact-content .contact-left,.contact-content .contact-right{min-height:0;}
