@@ -5,7 +5,7 @@
         <div class="logo col-md-5 col-sm-5 col-xs-12 no-padding">
           <a href="/"><img src="/image/logo.png" class="img-responsive" alt="logo"/></a>
         </div><!--LOGO-->
-
+<!--
         <div class="social-icon col-md-7 col-sm-7 col-xs-12 no-padding">
           <ul class="list-inline">
             <li><a href="#nogo"><span class="fa fa-linkedin"></span></a></li>
@@ -16,7 +16,7 @@
           <!-- <div class="search">
 	<span><a href="#nogo"><span class="fa fa-search"></span></a></span>
 	<input type="text" placeholder="..search">
-</div> -->
+</div> ->
         </div>
 
 	      <div class="menublock col-md-12 col-sm-12 col-xs-12">
@@ -59,8 +59,8 @@
     </div><!--CONTAINER--
   </div><!--MENUBLOCK-->
 
-  <% if @page_properties[:carousel] %>
-
+  <%# if @page_properties[:carousel] %>
+<!--
     <div class="banner col-md-12 col-sm-12 col-xs-12 no-padding">
       <div class="flexslider">
         <ul class="slides">
@@ -69,37 +69,37 @@
             <div class="banner-content one">
               <h2><a href="#nogo">NESANS</a></h2>
 	            <p>Automation</p>
-            </div><!--BANNER-CONTENT-->
+            </div><!--BANNER-CONTENT->
 
             <div class="banner-content">
               <h2><a href="#nogo">Our Sophisticated Drive TEchnology has made Screening and Washing Easier</a></h2>
 	            <p>Our Energy Efficient Drive Systems ( EEDS ) can save a huge part of your utility Bill.</p>
 	            <h3>AT NESANS WE TRY TO EXPERTISE ENERGY</h3>
-            </div><!--BANNER-CONTENT-->
+            </div><!--BANNER-CONTENT->
           </li>
 
         </ul>
       </div>
 
-    </div><!--BANNER-BLOCK-->
+    </div><!--BANNER-BLOCK->
 
-  <% else %>
+  <%# else %>
 
     <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
 
       <ul class="list-unstyled">
         <li>
           <div class="banner-text col-md-5 col-sm-5 col-xs-12">
-            <h2><a href="#nogo"><%= @article.banner_text ||= @page_properties[:banner_content] rescue @page_properties[:banner_content] %></a></h2>
-          </div><!--BANNER-CONTENT-->
+            <h2><a href="#nogo"><%#= @article.banner_text ||= @page_properties[:banner_content] rescue @page_properties[:banner_content] %></a></h2>
+          </div><!--BANNER-CONTENT->
           <div class="banner-img col-md-7 col-sm-7 col-xs-12 no-padding">
-            <img src="<%= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
-          </div><!--BANNER-IMG-->
+            <img src="<%#= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
+          </div><!--BANNER-IMG->
         </li>
       </ul>
-
+-->
     </div><!--BANNER-->
 
-  <% end %>
+  <%# end %>
 
 </header>

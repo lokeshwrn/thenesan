@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   get 'home/index'
+  get 'home/evl'
 
-  root 'home#index'
+  root 'home#evl'
 
 
   # site-side routes
