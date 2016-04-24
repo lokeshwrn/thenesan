@@ -116,8 +116,8 @@ header{overflow:hidden;}
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5eaae5', endColorstr='#1e75cc',GradientType=0 ); /* IE6-9 */
 }
 .description-parent{width:20%;float:left;padding:0 10px;transition:all 0.3s ease-in;}
-.mini-desc{border:1px solid #fff;text-align: center;padding:10px 10px;min-height:250px;position:relative;cursor: pointer;}
-.mini-desc h4{margin:15px 0px;color:#fff;}
+.mini-desc{border:1px solid #fff;text-align: center;padding:10px 10px;min-height:400px;position:relative;cursor: pointer;}
+.mini-desc h4{margin:15px 0;color:#fff;text-transform: uppercase;}
 .mini-desc h4 a{color:#fff;position: relative;}
 .mini-desc p{font-size:16px;position: relative;color:#fff;}
 .mini-desc span{position:absolute;bottom:0;left:0;width:100%;height:5px;background-color: #4da6ff;z-index:0;transition:all 0.3s linear;}

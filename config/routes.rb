@@ -7,19 +7,14 @@ Rails.application.routes.draw do
 
   # site-side routes
   get '/products', :to => 'home#products_listing'
-  get '/about-us', :to => 'home#about_us'
   get '/contact-us', :to => 'home#contact_us'
   get '/nesan-oem', :to => 'home#nesan_oem'
-  get '/spares', :to => 'home#spares'
-  get '/showroom', :to => 'home#showroom'
+  # get '/spares', :to => 'home#spares'
+  # get '/showroom', :to => 'home#showroom'
   get '/products/:product_url', :to => 'home#products'
   get '/products/:product_url/:article_url', :to => 'home#articles'
 
-  get '/terms-of-use', :to => 'home#terms_of_use'
-  get '/privacy-policy', :to => 'home#privacy_policy'
-  get '/trademarks', :to => 'home#trademarks'
-  get '/site-map', :to => 'home#site_map'
-
+  get '/:article_url', :to => 'home#static_page'
 
   # admin-side routes
   get 'admin/articles', :to => 'admin#list_articles', :as => 'list_articles'

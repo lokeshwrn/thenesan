@@ -32,13 +32,14 @@
             </p>
             <p class="form--right">
               <%#= f.text_field :content_url, :class => 'form-white', :placeholder => 'Content URL' %>
+              <%= select_tag "article[article_type]", options_for_select(["Article", "Static-Page"], @articles.article_type), :class => "cs-select cs-skin-elastic" %>
             </p>
             <p class="form--left">
               <%#= select_tag "article[article_type]", options_for_select([ "Services", "Modules"],@articles.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Type--" %>
               <%= collection_select :article, :product_id, Product.all, :id, :name, options={:selected => @articles.product.try(:id), :include_blank => '--Product Type--'}, {:class=>"cs-select cs-skin-elastic"} %>
             </p>
             <p class="form--right">
-              <%= select_tag "article[status]", options_for_select([ true, false],@articles.status), :class => "cs-select cs-skin-elastic", prompt: "--Status--" %>
+              <%= select_tag "article[status]", options_for_select([true, false],@articles.status), :class => "cs-select cs-skin-elastic", prompt: "--Status--" %>
             </p>
             <p class="form--content">
               <%#= f.text_area :content, :class => 'form-white', :placeholder => 'Content', :rows => 5 %>

@@ -37,14 +37,14 @@ class AdminController < ApplicationController
   end
 
   def list_articles
-    @articles = Article.all.by_updated.sort{|x,y| x.product.name <=> y.product.name}
+    @articles = Article.by_type("Article").by_updated.order('product_id') + Article.by_type("Static-Page")
     @page_properties = {:header => "Article Listing"}
   end
 
   private
 
   def article_params
-    params.require(:article).permit(:id, :title, :description, :content, :status, :alias_url, :img_url, :content_url, :status, :sequence_number, :product_id)
+    params.require(:article).permit(:id, :title, :description, :content, :status, :alias_url, :img_url, :content_url, :status, :sequence_number, :product_id, :article_type)
   end
 
   def authentication_check

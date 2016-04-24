@@ -22,6 +22,16 @@ class HomeController < ApplicationController
   end
 
   def articles
-    @article = Article.active.by_url(params[:article_url])
+    @product = Product.by_url(params[:product_url])
+    @article = @product.articles.active.by_url(params[:article_url])
+  end
+
+  def static_page
+    @article = Article.active.by_type("Static-Page").by_url(params[:article_url]).first
+    if @article
+      render :action => 'articles'
+    else
+      render_404
+    end
   end
 end

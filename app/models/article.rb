@@ -9,6 +9,6 @@ class Article < ActiveRecord::Base
   scope :by_updated, -> { order('updated_at desc') }
   scope :active, -> { where('status = ?', true) }
   scope :by_type, -> (type) { where('article_type = ?', type) }
-  scope :by_url, -> (url) { self.find_by_alias_url(url) }
+  scope :by_url, -> (url) { where('alias_url = ?', url) }
 
 end

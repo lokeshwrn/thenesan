@@ -21,7 +21,7 @@
                 <a href="/admin/articles/<%= article.id %>/edit">
                   <div class="article-content article-content-<%= article.status %>">
                     <h3><%= article.title %></h3>
-                    <p><%= article.product.name %></p>
+                    <p><%= article.product.name rescue "Static-Page" %></p>
                   </div>
                 </a>
               </div>
