@@ -1,22 +1,28 @@
 class HomeController < ApplicationController
 
   def index
-    @page_properties = {:carousel => true }
-  end
-
-  def readmore
-
+    @page_properties[:carousel] = true
   end
 
   def about_us
+    @page_properties[:banner_img] = "/image/5.png"
+    @page_properties[:banner_content] = "To Express To Engineer and To Execute"
+  end
 
+  def contact_us
+    @page_properties[:banner_img] = "/image/3.png"
+    @page_properties[:banner_content] = "Get in Touch to get the ball Rolling"
   end
   
   def products_listing
+    @page_properties[:banner_img] = "/image/1.png"
+    @page_properties[:banner_content] = "Excellence in Aggregate Equipment Design"
     @products = Product.active
   end
 
   def products
+    @page_properties[:banner_img] = "/image/4.png"
+    # @page_properties[:banner_content] = "Excellence in Aggregate Equipment Design"
     @product = Product.active.by_url(params[:product_url])
     @articles = @product.articles.active.by_sequence rescue nil
   end

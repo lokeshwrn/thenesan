@@ -27,7 +27,7 @@
 	        <ul class="menu">
 	          <li><a href="/">HOME</a></li>
 	          <li><a href="/products">PRODUCTS</a></li>
-	          <li><a href="/nesan-oem">NESANS OEM</a></li>
+	          <li><a href="/about-us">NESANS OEM</a></li>
 	          <li><a href="/spares">SPARES</a></li>
 	          <li><a href="/showroom">SHOWROOM</a></li>
 	          <li><a href="/contact-us">CONTACT US</a></li>
@@ -86,16 +86,19 @@
   <% else %>
 
     <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
+
       <ul class="list-unstyled">
         <li>
-          <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
-          <div class="banner-content wow bounceInUp" data-wow-delay="2s">
-            <h2><a href="#nogo">Cras convallis</a></h2>
+          <div class="banner-text col-md-5 col-sm-5 col-xs-12">
+            <h2><a href="#nogo"><%= @article.banner_text ||= @page_properties[:banner_content] rescue @page_properties[:banner_content] %></a></h2>
           </div><!--BANNER-CONTENT-->
+          <div class="banner-img col-md-7 col-sm-7 col-xs-12 no-padding">
+            <img src="<%= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
+          </div><!--BANNER-IMG-->
         </li>
       </ul>
 
-    </div><!--BANNER-BLOCK-->
+    </div><!--BANNER-->
 
   <% end %>
 
