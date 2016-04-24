@@ -97,10 +97,11 @@ header{overflow:hidden;}
 .banner-content.one h2{text-align:right;font-size:45px;margin-bottom: 0;padding:0;}
 .banner-content.one p{text-align:right;margin-bottom: 0;font-size:18px;padding:0;}
 
-.banner-without-slide{height:300px;}
+.banner-without-slide,.banner-img{height:300px;}
 .banner-without-slide ul{margin-bottom:0;}
 .banner-without-slide ul li{text-align:center;}
-.banner-without-slide ul li img{margin:0px auto;width:100%;position:relative;top:-110px;}
+/*.banner-without-slide ul li img{margin:0px auto;width:100%;position:relative;top:-110px;}*/
+.banner-without-slide ul li img{height:100%;}
 .banner-text{background-color:#0066cc;padding-top:6%;height:300px;}
 .banner-text h2{color:#FFF;}
 .banner-text h2 a{color:#FFF;}
@@ -344,7 +345,7 @@ span.cs-placeholder{text-transform: capitalize;}
     .banner-content.one h2{font-size:26px;}
     .banner .slides li img{top:-200px;}
     
-    .banner-without-slide,.banner-text{height:280px;}
+    .banner-without-slide,.banner-text,.banner-img{height:280px;}
     .banner-text{padding-top:8.5%;}
     .banner-text h2{font-size:22px;}
     .banner-without-slide ul li img{top:-50px;}
@@ -393,7 +394,7 @@ span.cs-placeholder{text-transform: capitalize;}
     .banner-content.one  p{font-size:15px;}
     .banner .slides li img{top:-172px;}
     
-    .banner-without-slide,.banner-text{height:220px;}
+    .banner-without-slide,.banner-text,.banner-img{height:220px;}
     .banner-text{padding-top:8.5%;}
     .banner-text h2{font-size:22px;}
     .banner-without-slide ul li img{top:-28px;}

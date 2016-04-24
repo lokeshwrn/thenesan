@@ -6,7 +6,7 @@ class AdminController < ApplicationController
 
   def new_articles
     @articles = Article.new
-    @page_properties = {:header => "Create New Article"}
+    @page_properties[:header] = "Create New Article"
     @validate = %w(title email institution parent_name)
     render :template => 'admin/articles_form'
   end
@@ -22,7 +22,7 @@ class AdminController < ApplicationController
 
   def edit_articles
     @articles = Article.find(params[:id])
-    @page_properties = {:header => "Edit Article"}
+    @page_properties[:header] = "Edit Article"
     render :template => 'admin/articles_form'
   end
 
@@ -38,13 +38,13 @@ class AdminController < ApplicationController
 
   def list_articles
     @articles = Article.by_type("Article").by_updated.order('product_id') + Article.by_type("Static-Page")
-    @page_properties = {:header => "Article Listing"}
+    @page_properties[:header] = "Article Listing"
   end
 
   private
 
   def article_params
-    params.require(:article).permit(:id, :title, :description, :content, :status, :alias_url, :img_url, :content_url, :status, :sequence_number, :product_id, :article_type)
+    params.require(:article).permit(:id, :title, :description, :content, :status, :alias_url, :img_url, :content_url, :status, :sequence_number, :product_id, :article_type, :banner_text, :banner_url)
   end
 
   def authentication_check

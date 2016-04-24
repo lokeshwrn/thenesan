@@ -6,8 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_page_properties
 
   def set_page_properties
-    @page_properties = {}
-    @validate = %w(name email company budget start_date)
+    @page_properties = {:banner_img => "http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png", :banner_content => "Nesans M & A"}
   end
 
 end

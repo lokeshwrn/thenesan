@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411151006) do
+ActiveRecord::Schema.define(version: 20160424150721) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20160411151006) do
     t.integer  "product_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "banner_text"
+    t.string   "banner_url"
   end
 
   create_table "products", force: :cascade do |t|
