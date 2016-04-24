@@ -23,7 +23,7 @@ class HomeController < ApplicationController
 
   def articles
     @product = Product.by_url(params[:product_url])
-    @article = @product.articles.active.by_url(params[:article_url])
+    @article = @product.articles.active.by_url(params[:article_url]).first
   end
 
   def static_page
