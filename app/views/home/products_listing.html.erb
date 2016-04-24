@@ -31,3 +31,10 @@
   </div><!--PRODUCT-BLOCK-->
 
 </div><!--CONTAINER-BLOCK-->
+
+<!-- center align div on odd count -->
+<% if @products.count % 2 == 1 %>
+<script>
+	$('.product-content:last-child').addClass('product-without-slide');
+</script>
+<% end %>
