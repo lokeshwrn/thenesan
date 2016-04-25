@@ -83,7 +83,7 @@
 
     </div><!--BANNER-BLOCK-->
 
-		<% elsif @article and @article.banner_url.present? %>
+		<% elsif @article and @article.article_type != "Static-Page" and @article.banner_url.present? %>
 
     <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
 
