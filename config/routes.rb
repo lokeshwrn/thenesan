@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/evl'
 
-  root 'home#evl'
+  root 'home#index'
 
 
   # site-side routes
