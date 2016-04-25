@@ -99,6 +99,7 @@
       </ul>
 
     </div><!--BANNER-->
+
   <% else %>
 
     <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
@@ -107,7 +108,10 @@
         <li>
           <img src="<%= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
           <div class="banner-content wow bounceInUp" data-delay="0.8s">
+            <% if @article and @article.banner_text.present? %>
             <h2><a href="#nogo"><%= @article.banner_text ||= @page_properties[:banner_content] rescue @page_properties[:banner_content] %></a></h2>
+            <% end %>
+
           </div><!--BANNER-CONTENT-->
         </li>
       </ul>
