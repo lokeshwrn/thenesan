@@ -21,7 +21,7 @@
 
 	      <div class="menublock col-md-12 col-sm-12 col-xs-12">
 	        <div class="d-menu">
-	          <a class="menu-icon"></a>
+	          <a href="#nogo" class="menu-icon"></a>
 	        </div>
 
 	        <ul class="menu">
@@ -83,7 +83,7 @@
 
     </div><!--BANNER-BLOCK-->
 
-  <% else %>
+		<% elsif @article and @article.banner_url.present? %>
 
     <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
 
@@ -95,6 +95,20 @@
           <div class="banner-img col-md-7 col-sm-7 col-xs-12 no-padding">
             <img src="<%= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
           </div><!--BANNER-IMG-->
+        </li>
+      </ul>
+
+    </div><!--BANNER-->
+  <% else %>
+
+    <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
+
+      <ul class="list-unstyled">
+        <li>
+          <img src="<%= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
+          <div class="banner-content wow bounceInUp" data-delay="0.8s">
+            <h2><a href="#nogo"><%= @article.banner_text ||= @page_properties[:banner_content] rescue @page_properties[:banner_content] %></a></h2>
+          </div><!--BANNER-CONTENT-->
         </li>
       </ul>
 
