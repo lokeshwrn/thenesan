@@ -34,9 +34,9 @@
 <body>
 
 <div id="wrapper">
-<% cache(generate_login_keys, :expires_in => 5.days) do %>
+<%# cache(generate_login_keys, :expires_in => 1.hour) do %>
   <%= render :partial => 'layouts/header' %>
-<% end %>
+<%# end %>
 
   <%= yield %>
 
