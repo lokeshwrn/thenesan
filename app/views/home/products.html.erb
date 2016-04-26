@@ -15,11 +15,12 @@
 
         </div><!--CONTENT-->
 
-        <% @articles.each_slice(2).each do |articles|%>
 
           <div class="content col-md-12 col-sm-12 col-xs-12 no-padding">
 
-            <div class="product-content col-md-12 col-sm-12 col-xs-12 no-padding">
+            <% @articles.each_slice(2).each do |articles|%>
+
+          <div class="product-content col-md-12 col-sm-12 col-xs-12 no-padding">
               <% articles.each do |article|%>
 
                 <div class="product-parent col-md-6 col-sm-6 col-xs-6 no-padding">
@@ -35,9 +36,10 @@
               <% end %>
 
             </div><!--PRODUCT-CONTENT-->
+            <% end %>
+
           </div><!--CONTENT-->
 
-        <% end %>
 
         <%#= link_to x.title, "/products/#{@product.alias_url + "/" + x.alias_url}" %>
         <%# end %>
@@ -47,7 +49,6 @@
   </div><!--SUMMARY-BLOCK-->
 
 </div><!--CONTAINER-BLOCK-->
-
 
 <% if @articles.count % 2 == 1 %>
     <script>
