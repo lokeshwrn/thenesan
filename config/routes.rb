@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
   get 'home/index'
-  get 'home/evl'
 
   root 'home#index'
-
 
   # site-side routes
   get '/products', :to => 'home#products_listing'
