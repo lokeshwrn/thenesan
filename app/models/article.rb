@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
   belongs_to :product
 
   validates_presence_of :title
-  validates_uniqueness_of  :alias_url, :allow_blank => true
+  # validates_uniqueness_of  :alias_url, :allow_blank => true
 
   scope :by_sequence, -> { order('sequence_number') }
   scope :by_updated, -> { order('updated_at desc') }
