@@ -4,6 +4,16 @@ class HomeController < ApplicationController
     @page_properties[:carousel] = true
   end
 
+  def spares
+    @page_properties[:banner_img] = "/image/1.jpg"
+    @page_properties[:banner_content] = "Excellence in Aggregate Equipment Design"
+  end
+
+  def showroom
+    @page_properties[:banner_img] = "/image/1.jpg"
+    @page_properties[:banner_content] = "Excellence in Aggregate Equipment Design"
+  end
+
   def about_us
     @page_properties[:banner_img] = "/image/5.jpg"
     @page_properties[:banner_content] = "To Express To Engineer and To Execute"

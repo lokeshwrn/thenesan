@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   get '/products', :to => 'home#products_listing'
   get '/contact-us', :to => 'home#contact_us'
   get '/about-us', :to => 'home#about_us'
-  # get '/spares', :to => 'home#spares'
-  # get '/showroom', :to => 'home#showroom'
+  get '/spares', :to => 'home#spares'
+  get '/showroom', :to => 'home#showroom'
   get '/products/:product_url', :to => 'home#products'
   get '/products/:product_url/:article_url', :to => 'home#articles'
 
