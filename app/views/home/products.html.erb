@@ -47,3 +47,10 @@
   </div><!--SUMMARY-BLOCK-->
 
 </div><!--CONTAINER-BLOCK-->
+
+
+<% if @articles.count % 2 == 1 %>
+    <script>
+        $('.product-content:last-child').addClass('product-without-slide');
+    </script>
+<% end %>
