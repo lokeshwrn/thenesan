@@ -19,20 +19,20 @@
 </div> -->
         </div>
 
-	      <div class="menublock col-md-12 col-sm-12 col-xs-12">
-	        <div class="d-menu">
-	          <a href="#nogo" class="menu-icon"></a>
-	        </div>
+        <div class="menublock col-md-12 col-sm-12 col-xs-12">
+          <div class="d-menu">
+            <a href="#nogo" class="menu-icon"></a>
+          </div>
 
-	        <ul class="menu">
-	          <li><a href="/">HOME</a></li>
-	          <li><a href="/products">PRODUCTS</a></li>
-	          <li><a href="/about-us">NESANS OEM</a></li>
-	          <li><a href="/spares">SPARES</a></li>
-	          <li><a href="/showroom">SHOWROOM</a></li>
-	          <li><a href="/contact-us">CONTACT US</a></li>
-	        </ul>
-	      </div>
+          <ul class="menu">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/products">PRODUCTS</a></li>
+            <li><a href="/about-us">NESANS OEM</a></li>
+            <li><a href="/spares">SPARES</a></li>
+            <li><a href="/showroom">SHOWROOM</a></li>
+            <li><a href="/contact-us">CONTACT US</a></li>
+          </ul>
+        </div>
 
       </div><!--ROW-->
     </div><!--CONTAINER-->
@@ -61,62 +61,65 @@
 
   <% if @page_properties[:carousel] %>
 
-    <div class="banner col-md-12 col-sm-12 col-xs-12 no-padding">
-      <div class="flexslider">
-        <ul class="slides">
-          <li>
-            <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
-            <div class="banner-content one" style="display:none;">
-              <h2><a href="#nogo">NESANS</a></h2>
-	            <p>Automation</p>
-            </div><!--BANNER-CONTENT-->
+      <div class="banner col-md-12 col-sm-12 col-xs-12 no-padding">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/5.png" class="img-responsive" alt="banner">
+              <div class="banner-content one" style="display:none;">
+                <h2><a href="#nogo">NESANS</a></h2>
+                <p>Automation</p>
+              </div><!--BANNER-CONTENT-->
 
-            <div class="banner-content">
-              <h2><a href="#nogo">Our Sophisticated Drive Technology has made Screening and Washing Easier</a></h2>
-	            <p>Our Energy Efficient Drive Systems ( EEDS ) can save a huge part of your utility Bill.</p>
-	            <h3>AT NESANS WE TRY TO EXPERTISE ENERGY</h3>
-            </div><!--BANNER-CONTENT-->
-          </li>
+              <div class="banner-content">
+                <h2><a href="#nogo">Our Sophisticated Drive Technology has made Screening and Washing Easier</a></h2>
+                <p>Our Energy Efficient Drive Systems ( EEDS ) can save a huge part of your utility Bill.</p>
+                <h3>AT NESANS WE TRY TO EXPERTISE ENERGY</h3>
+              </div><!--BANNER-CONTENT-->
+            </li>
 
-        </ul>
+          </ul>
+        </div>
+
+      </div><!--BANNER-BLOCK-->
+
+  <% elsif @article and @article.article_type != "Static-Page" and @article.banner_url.present? %>
+      <div class="container no-padding">
+        <div class="row no-margin">
+          <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
+
+            <ul class="list-unstyled">
+              <li>
+                <div class="banner-text col-md-5 col-sm-5 col-xs-12">
+                  <h2><a href="#nogo"><%= @article.banner_text ||= @page_properties[:banner_content] rescue @page_properties[:banner_content] %></a></h2>
+                </div><!--BANNER-CONTENT-->
+                <div class="banner-img col-md-7 col-sm-7 col-xs-12 no-padding">
+                  <img src="<%= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
+                </div><!--BANNER-IMG-->
+              </li>
+            </ul>
+
+          </div><!--BANNER-->
+        </div>
       </div>
-
-    </div><!--BANNER-BLOCK-->
-
-		<% elsif @article and @article.article_type != "Static-Page" and @article.banner_url.present? %>
-
-    <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
-
-      <ul class="list-unstyled">
-        <li>
-          <div class="banner-text col-md-5 col-sm-5 col-xs-12">
-            <h2><a href="#nogo"><%= @article.banner_text ||= @page_properties[:banner_content] rescue @page_properties[:banner_content] %></a></h2>
-          </div><!--BANNER-CONTENT-->
-          <div class="banner-img col-md-7 col-sm-7 col-xs-12 no-padding">
-            <img src="<%= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
-          </div><!--BANNER-IMG-->
-        </li>
-      </ul>
-
-    </div><!--BANNER-->
 
   <% else %>
 
-    <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
+      <div class="banner banner-without-slide col-md-12 col-sm-12 col-xs-12 no-padding">
 
-      <ul class="list-unstyled">
-        <li>
-          <img src="<%= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
-          <div class="banner-content wow bounceInUp" data-delay="0.8s">
-            <% if @article and @article.banner_text.present? %>
-            <h2><a href="#nogo"><%= @article.banner_text ||= @page_properties[:banner_content] rescue @page_properties[:banner_content] %></a></h2>
-            <% end %>
+        <ul class="list-unstyled">
+          <li>
+            <img src="<%= @article.banner_url ||= @page_properties[:banner_img] rescue @page_properties[:banner_img] %>" class="img-responsive" alt="banner">
+            <div class="banner-content wow bounceInUp" data-delay="0.8s">
+              <% if @article and @article.banner_text.present? %>
+                  <h2><a href="#nogo"><%= @article.banner_text ||= @page_properties[:banner_content] rescue @page_properties[:banner_content] %></a></h2>
+              <% end %>
 
-          </div><!--BANNER-CONTENT-->
-        </li>
-      </ul>
+            </div><!--BANNER-CONTENT-->
+          </li>
+        </ul>
 
-    </div><!--BANNER-->
+      </div><!--BANNER-->
 
   <% end %>
 
