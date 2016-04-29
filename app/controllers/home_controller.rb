@@ -2,6 +2,7 @@ class HomeController < ApplicationController
 
   def index
     @page_properties[:carousel] = true
+    @page_properties[:page_title] = "Nesans Mining and Automation Pvt Ltd | Stone Crusher Plant, Crusher Machine, Vibrating Screen, Vibratory Feeder, Sand Making Machine"
   end
 
   def spares
