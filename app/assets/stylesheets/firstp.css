@@ -449,6 +449,7 @@ span.cs-placeholder{text-transform: capitalize;}
 	p{margin-bottom:20px;font-size:14px;line-height:28px;}
 	h3.title{margin-bottom:10px;}
     h3.title a{font-size:30px;}
+    .banner{display:none;}
 	
 	.logo{padding:0 10px;text-align:center;}
     .logo img{float:none;margin:0px auto;}
