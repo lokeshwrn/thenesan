@@ -23,6 +23,7 @@ class HomeController < ApplicationController
   def contact_us
     @page_properties[:banner_img] = "/image/3.jpg"
     @page_properties[:banner_content] = "Get in Touch to get the ball Rolling"
+    @page_properties[:disable] = true
   end
   
   def products_listing
