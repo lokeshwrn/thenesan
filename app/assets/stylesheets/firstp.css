@@ -454,8 +454,7 @@ span.cs-placeholder{text-transform: capitalize;}
 	
 	.logo{padding:0 10px;text-align:center;}
     .logo img{float:none;margin:0px auto;}
-    /* pritorize content*/
-	.social-icon{padding:15px 10px 0;position:relative;bottom:0px;z-index:100;width:50%;float:right;display:none;}
+	.social-icon{padding:15px 10px 0;position:relative;bottom:0px;z-index:100;width:50%;float:right;}
     .social-icon ul{margin-bottom: 0;}
 	.menu{display:none;}
     .menublock{padding-top: 0;background-color:transparent;margin-top:-35px;}
