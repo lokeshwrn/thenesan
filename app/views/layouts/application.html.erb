@@ -24,7 +24,6 @@
   <!--<link href="stylesheets/flexslider.css" media="all" type="text/css" rel="stylesheet"/>-->
   <!--<link href="stylesheets/animate.css" media="all" type="text/css" rel="stylesheet"/>-->
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
 </head>
 <body>
@@ -38,6 +37,8 @@
 
   <%= render :partial => 'layouts/footer' %>
 </div>
+</body>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
 <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,600' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
@@ -62,7 +63,6 @@
     ga('send', 'pageview');
 
 </script>
-</body>
 
 <%#= render :partial => 'layouts/validation_script' %>
 </html>
