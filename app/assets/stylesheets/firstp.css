@@ -449,10 +449,12 @@ span.cs-placeholder{text-transform: capitalize;}
 	p{margin-bottom:20px;font-size:14px;line-height:28px;}
 	h3.title{margin-bottom:10px;}
     h3.title a{font-size:30px;}
+    /* pritorize content*/
     .banner{display:none;}
 	
 	.logo{padding:0 10px;text-align:center;}
     .logo img{float:none;margin:0px auto;}
+    /* pritorize content*/
 	.social-icon{padding:15px 10px 0;position:relative;bottom:0px;z-index:100;width:50%;float:right;display:none;}
     .social-icon ul{margin-bottom: 0;}
 	.menu{display:none;}
