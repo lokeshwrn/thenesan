@@ -66,8 +66,8 @@
     ga('send', 'pageview');
 </script>
 
-<!--Selection disable script-->
 <% unless @page_properties[:disable] %>
+    <!--Selection disable script-->
     <script>
         jQuery.fn.extend({
             disableSelection : function() {
