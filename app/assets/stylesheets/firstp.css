@@ -326,8 +326,8 @@ span.cs-placeholder{text-transform: capitalize;}
 
 .footer-bottom { padding:1.5% 0%;}
 .footer-bottom .footer-content { border-top: 1px solid lightgray; padding: 25px 2.5% 0;}
-.copyright{float:left;}
-.powered-by{float:right;}
+.copyright{float:left;text-align: left;}
+.powered-by{float:right;text-align: right;}
 .footer-bottom p{color:#999;margin-bottom:0;font-size:16px;}
 .footer-bottom p span{color:#fff;font-weight:bold;}
 
