@@ -20,4 +20,3 @@ function error_shake(elem, active_class, time){
     classie.add2( elem, active_class );
     setTimeout( function() { classie.remove2( elem, active_class ) }, time );
 }
-
