@@ -23,7 +23,7 @@
           <div class="product-content col-md-12 col-sm-12 col-xs-12 no-padding">
               <% articles.each do |article|%>
 
-                <div class="product-parent col-md-12 col-sm-12 col-xs-12 no-padding">
+                <div class="product-parent col-md-6 col-sm-6 col-xs-12 no-padding">
                   <div class="product col-md-12 col-sm-12 col-xs-12 no-padding">
                     <div class="image-content col-md-12 col-sm-12 col-xs-12 no-padding">
                       <a href="/products/<%= @product.alias_url + "/" + article.alias_url %>"><img src="<%= article.img_url%>" alt="product-img" class="img-responsive"></a>
