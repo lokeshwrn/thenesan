@@ -1,42 +1,32 @@
 class HomeController < ApplicationController
 
   def index
-    @page_properties[:carousel] = true
-    @page_properties[:page_title] = "Nesans Mining and Automation Pvt Ltd | Stone Crusher Plant, Crusher Machine, Vibrating Screen, Vibratory Feeder, Sand Making Machine"
-    @page_properties[:page_name] = "home"
+    @page_properties.merge({:carousel => true, :page_title => "Nesans Mining and Automation Pvt Ltd | Stone Crusher Plant, Crusher Machine, Vibrating Screen, Vibratory Feeder, Sand Making Machine", :page_name => "home"})
   end
 
   def spares
-    @page_properties[:banner_img] = "/image/1.jpg"
-    @page_properties[:banner_content] = "Excellence in Aggregate Equipment Design"
+    @page_properties.merge({:banner_img => "/image/1.jpg", :banner_content => "Excellence in Aggregate Equipment Design"})
   end
 
   def showroom
-    @page_properties[:banner_img] = "/image/1.jpg"
-    @page_properties[:banner_content] = "Excellence in Aggregate Equipment Design"
+    @page_properties.merge({:banner_img => "/image/1.jpg", :banner_content => "Excellence in Aggregate Equipment Design"})
   end
 
   def about_us
-    @page_properties[:banner_img] = "/image/5.jpg"
-    @page_properties[:banner_content] = "To Express To Engineer and To Execute"
+    @page_properties.merge({:banner_img => "/image/5.jpg", :banner_content => "To Express To Engineer and To Execute"})
   end
 
   def contact_us
-    @page_properties[:banner_img] = "/image/3.jpg"
-    @page_properties[:banner_content] = "Get in Touch to get the ball Rolling"
-    @page_properties[:disable] = true
-    @page_properties[:page_name] = "contact-us"
+    @page_properties.merge({:banner_img => "/image/3.jpg", :banner_content => "Get in Touch to get the ball Rolling", :disable => true, :page_name => "contact-us"})
   end
   
   def products_listing
-    @page_properties[:banner_img] = "/image/1.jpg"
-    @page_properties[:banner_content] = "Excellence in Aggregate Equipment Design"
+    @page_properties.merge({:banner_img => "/image/1.jpg", :banner_content => "Excellence in Aggregate Equipment Design"})
     @products = Product.active
   end
 
   def products
     @page_properties[:banner_img] = "/image/4.jpg"
-    # @page_properties[:banner_content] = "Excellence in Aggregate Equipment Design"
     @product = Product.active.by_url(params[:product_url])
     @articles = @product.articles.active.by_sequence rescue nil
   end
