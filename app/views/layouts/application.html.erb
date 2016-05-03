@@ -100,20 +100,20 @@
             touch : true,
             pauseOnHover : true
         });
-        
+
         $("#contact_pop").on('click',function(){
-        	console.log("asdf");
-			//event.preventDefault();
-			$(".popup").show();
-		});
-		
-		
-		$("#close_id").click(function(){
-			$(".popup").hide();
-		});
-		
+            console.log("asdf");
+            //event.preventDefault();
+            $(".popup").show();
+        });
+
+
+        $("#close_id").click(function(){
+            $(".popup").hide();
+        });
+
     });
-    
+
     $(window).load(function(){
         /* wow script for animation */
         var wow = new WOW().init();
@@ -121,29 +121,44 @@
 </script>
 
 <script>
-	var myCenter=new google.maps.LatLng(10.930990,76.971939);
-	var marker;
-	
-	function mapInit()
-	{
-	var mapProp = {
-	  center:myCenter,
-	  zoom:12,
-	  mapTypeId:google.maps.MapTypeId.HYBRID
-	  };
-	
-	var map=new google.maps.Map(document.getElementById("contact_map"),mapProp);
-	
-	var marker=new google.maps.Marker({
-	  position:myCenter,
-	  animation:google.maps.Animation.BOUNCE
-	  });
-	
-	marker.setMap(map);
-	}
-	
-	google.maps.event.addDomListener(window, 'load', mapInit);
+    var myCenter=new google.maps.LatLng(10.930990,76.971939);
+    var marker;
+
+    function mapInit()
+    {
+        var mapProp = {
+            center:myCenter,
+            zoom:12,
+            mapTypeId:google.maps.MapTypeId.HYBRID
+        };
+
+        var map=new google.maps.Map(document.getElementById("contact_map"),mapProp);
+
+        var marker=new google.maps.Marker({
+            position:myCenter,
+            animation:google.maps.Animation.BOUNCE
+        });
+
+        marker.setMap(map);
+    }
+
+    google.maps.event.addDomListener(window, 'load', mapInit);
 </script>
+
+<% if ["contact-us", "home"].include? @page_properties[:page_name] %>
+    <script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Nesans Mining and Automation Private Limited",
+  "url" : "http://www.thenesans.com",
+  "sameAs" : [
+    "https://www.linkedin.com/company/nesans-mining-and-automation-private-limited/",
+    "https://plus.google.com/+ssengineersindiain"
+  ]
+}
+</script>
+<% end %>
 
 <%#= render :partial => 'layouts/validation_script' %>
 </html>
