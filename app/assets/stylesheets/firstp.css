@@ -50,7 +50,7 @@ header{overflow:hidden;}
 .header-top{padding:5px 0px 10px;background-color:#fff;opacity:0.8;z-index:10;}
 .logo img{height:80px;float:left;}
 
-.menublock{padding:20px 2% 1.5%;background-color:rgba(255,255,255,0.5);/*height:60px;*/font-family: 'Josefin Sans', sans-serif;}
+.menublock{padding:0.5% 2%;background-color:rgba(255,255,255,0.5);/*height:60px;*/font-family: 'Josefin Sans', sans-serif;}
 .menublock ul{list-style-type:none;margin:0;text-align:center;transition: all 0.3s linear 0s;}
 .menublock ul li{font-size:15px;padding:0px 6px;display:inline-block;min-width:100px;border-top:1px solid #DADADA;border-right:1px solid #DADADA;border-bottom:1px solid #DADADA;}
 .menublock ul li:first-child{border-left:1px solid #DADADA;}

@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get '/:article_url', :to => 'home#static_page'
 
+  post '/submit_enquiry', :to => 'home#form_submit'
+
   # admin-side routes
   get 'admin/articles', :to => 'admin#list_articles', :as => 'list_articles'
   get 'admin/articles/:id/edit', :to => 'admin#edit_articles', :as => 'edit_articles'

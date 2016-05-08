@@ -15,90 +15,7 @@
             </p>
           </div><!--TEXT-CONTENT-->
 
-
-          <div class="contact-form col-md-12 col-sm-12 col-xs-12 no-padding">
-            <div class="contact-left col-md-6 col-sm-6 col-xs-12 no-padding">
-              <div class="contact-left-form col-md-12 col-sm-12 col-xs-12 no-padding">
-                <h4>Project Enquiry</h4>
-                <%= form_tag("/submit_enquiry", method: "post", multipart: true, id: "validate_form") do |f| %>
-
-                    <p>
-                      <%= text_field_tag 'name', nil, {class: "form-white", :placeholder => "Name *"} %>
-                    </p>
-
-                    <p>
-                      <%= text_field_tag 'email', nil, class: "form-white", :placeholder => "Email *" %>
-                    </p>
-
-                    <p>
-                      <%= text_field_tag 'company', nil, class: "form-white", :placeholder => "Company *" %>
-                    </p>
-
-                    <p>
-                      <%= text_field_tag 'website', nil, class: "form-white", :placeholder => "Website" %>
-                    </p>
-
-                    <p>
-                      <%= text_field_tag 'budget', nil, class: "form-white", :placeholder => "Budget *" %>
-                    </p>
-
-                    <p>
-                      <%= text_field_tag 'start_date', nil, class: "form-white", :placeholder => "Expected date of Start of Work *" %>
-                    </p>
-
-                    <p>
-                      <%= text_field_tag 'schedule', nil, class: "form-white", :placeholder => "Expected Project Schedule" %>
-                    </p>
-
-                    <p>
-                      <%= text_area_tag 'tell_us_more', nil, class: "form-white", :placeholder => "Tell us about your project", :rows => 3 %>
-                    </p>
-
-                    <div class="button_input col-md-12 col-sm-12 col-xs-12">
-                      <button class="btn" value="" name="commit">Kick Start Your Project</button>
-                    </div><!--BUTTON_INPUT-->
-
-                <% end %>
-
-              </div><!--CONTACT-LEFT-FORM-->
-
-              <div class="button_input single col-md-12 col-sm-12 col-xs-12">
-                <button class="btn" value="" name="commit">Submit Another Form</button>
-              </div><!--BUTTON_INPUT-->
-
-            </div><!--CONTACT-LEFT-->
-
-            <div class="contact-right col-md-6 col-sm-6 col-xs-12 no-padding">
-              <div class="contact-right-form col-md-12 col-sm-12 col-xs-12 no-padding">
-                <h4>Individual Machine Enquiry</h4>
-
-                <p><input type="text" value="" placeholder="Name" class="form-white"></p>
-
-                <p><input type="text" value="" placeholder="Email" class="form-white"></p>
-
-                <p><input type="text" value="" placeholder="Company" class="form-white"></p>
-
-                <p><input type="text" value="" placeholder="Website" class="form-white"></p>
-
-                <p><input type="text" value="" placeholder="Product" class="form-white"></p>
-
-                <p><input type="text" value="" placeholder="Capacity" class="form-white"></p>
-
-                <p><input type="text" value="" placeholder="Expected Project Schedule" class="form-white"></p>
-
-                <p><textarea type="text" value="" rows="3" placeholder="Tell us your expectations" class="form-white"></textarea></p>
-
-                <div class="button_input col-md-12 col-sm-12 col-xs-12">
-                  <button class="btn" value="" name="commit">Submit My Machine</button>
-                </div><!--BUTTON_INPUT-->
-              </div><!--CONTACT-RIGHT-FORM-->
-
-              <div class="button_input single col-md-12 col-sm-12 col-xs-12">
-                <button class="btn" value="" name="commit">Submit Another Form</button>
-              </div><!--BUTTON_INPUT-->
-
-            </div><!--CONTACT-RIGHT-FORM-->
-          </div><!--CONTACT-RIGHT-->
+          <%= render :partial => '/home/contact_form' %>
 
           <div class="contact-content col-md-12 col-sm-12 col-xs-12">
             <div class="contact-left col-md-6 col-sm-6 col-xs-12 no-padding">
@@ -149,8 +66,8 @@
           </div><!--CONTACT-CONTENT-->
 
           <div class="map_block col-md-12 col-sm-12 col-xs-12 no-padding">
-            <div id="contact_map" class="col-md-12 col-sm-12 col-xs-12 no-padding">
-
+            <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15670.63913869233!2d76.969743!3d10.9134396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc63e4c97a7db3921!2sNesans+Mining+and+Automation+Private+Limited!5e0!3m2!1sen!2sin!4v1462604941326" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div><!--CONTACT_MAP-->
           </div><!--MAP_BLOCK-->
         </div><!--CONTENT-->
@@ -160,19 +77,3 @@
   </div><!--SUMMARY-BLOCK-->
 
 </div><!--CONTAINER-BLOCK-->
-
-<script>
-    $('#validate_form button').click(function(e){
-        $('#validate_form input').each(function(){
-            var val = $(this).attr('id');
-            var ary = <%=raw @validate %>;
-            if(($.inArray(val, ary))>=0){
-                if($(this).val() == ''){
-                    var self = $(this), activatedClass = 'validate-err btn-error';
-                    error_shake(self, activatedClass, 4000);
-                    e.preventDefault();
-                }
-            }
-        });
-    });
-</script>
