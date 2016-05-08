@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>
-    <%= @article.page_title rescue @page_properties[:page_title] %>
+    <%= @article.page_title ||= @page_properties[:page_title] rescue @page_properties[:page_title] %>
   </title>
 
   <meta charset="UTF-8">
