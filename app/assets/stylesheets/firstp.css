@@ -470,7 +470,7 @@ span.cs-placeholder{text-transform: capitalize;}
     .logo img{float:right;}
 	.social-icon{padding:15px 10px 0;position:relative;bottom:0px;z-index:100;width:50%;float:right;display:none;}
     .social-icon ul{margin-bottom: 0;}
-	.menu{display:none;}
+	.menu{display:none;padding-top:25px;}
     .menublock{padding-top: 0;background-color:transparent;margin-top:-58px;}
     .menublock ul li a{padding:9px 5px 6px;/*color:#000;*/}
 	.menublock ul li{display:block;/*background-color:#0066CC;*/border:1px solid #DADADA;}

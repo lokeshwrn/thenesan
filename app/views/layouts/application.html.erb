@@ -118,6 +118,10 @@
         /* wow script for animation */
         var wow = new WOW().init();
     });
+
+    $('.d-menu').click(function(){
+        $('.menu').toggle();
+    })
 </script>
 
 <% if ["contact-us", "home"].include? @page_properties[:page_name] %>
