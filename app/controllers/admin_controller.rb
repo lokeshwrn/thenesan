@@ -44,7 +44,7 @@ class AdminController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:id, :title, :description, :content, :status, :alias_url, :img_url, :content_url, :status, :sequence_number, :product_id, :article_type, :banner_text, :banner_url)
+    params.require(:article).permit(:id, :title, :description, :content, :status, :alias_url, :img_url, :content_url, :status, :sequence_number, :product_id, :article_type, :banner_text, :banner_url, :page_title, :meta_data)
   end
 
   def authentication_check

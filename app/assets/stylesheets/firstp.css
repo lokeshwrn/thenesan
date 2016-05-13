@@ -50,7 +50,7 @@ header{overflow:hidden;}
 .header-top{padding:5px 0px 10px;background-color:#fff;opacity:0.8;z-index:10;}
 .logo img{height:80px;float:left;}
 
-.menublock{padding:20px 2% 1.5%;background-color:rgba(255,255,255,0.5);/*height:60px;*/font-family: 'Josefin Sans', sans-serif;}
+.menublock{padding:0.5% 2%;background-color:rgba(255,255,255,0.5);/*height:60px;*/font-family: 'Josefin Sans', sans-serif;}
 .menublock ul{list-style-type:none;margin:0;text-align:center;transition: all 0.3s linear 0s;}
 .menublock ul li{font-size:15px;padding:0px 6px;display:inline-block;min-width:100px;border-top:1px solid #DADADA;border-right:1px solid #DADADA;border-bottom:1px solid #DADADA;}
 .menublock ul li:first-child{border-left:1px solid #DADADA;}
@@ -477,13 +477,14 @@ span.cs-placeholder{text-transform: capitalize;}
 	h3.title{margin-bottom:10px;margin-top:0;}
     h3.title a{font-size:30px;}
     /* pritorize content*/
+    .header-top{border-bottom:1px solid;}
     .banner{display:none;}
 	
 	.logo{padding:0 10px;text-align:center;}
     .logo img{float:right;}
 	.social-icon{padding:15px 10px 0;position:relative;bottom:0px;z-index:100;width:50%;float:right;display:none;}
     .social-icon ul{margin-bottom: 0;}
-	.menu{display:none;}
+	.menu{display:none;padding-top:25px;}
     .menublock{padding-top: 0;background-color:transparent;margin-top:-58px;}
     .menublock ul li a{padding:9px 5px 6px;/*color:#000;*/}
 	.menublock ul li{display:block;/*background-color:#0066CC;*/border:1px solid #DADADA;}
@@ -578,6 +579,7 @@ span.cs-placeholder{text-transform: capitalize;}
 @media only screen and (max-width:480px) {
 	h3{font-size:22px;margin-bottom:20px;margin-top:15px;}
 	p{margin-bottom:10px;font-size:14px;line-height:24px;}
+    .header-top{border-bottom:1px solid;}
 
 	.banner{height:auto;}
 	.banner .slides li img{top:-40px;}
@@ -625,6 +627,7 @@ span.cs-placeholder{text-transform: capitalize;}
 
 @media only screen and (max-width:400px) {
 	h3.title a{font-size:28px;}
+    .header-top{border-bottom:1px solid;}
 	
 	.banner{height:auto;}
 	.banner-content.one{width:30%;}

@@ -18,6 +18,8 @@ class HomeController < ApplicationController
 
   def contact_us
     @page_properties.merge!({:banner_img => "/image/3.jpg", :banner_content => "Get in Touch to get the ball Rolling", :disable => true, :page_name => "contact-us"})
+    @validate_project = %w(name email company budget start_date)
+    @validate_machine = %w(name email company product)
   end
 
   def products_listing
@@ -44,4 +46,23 @@ class HomeController < ApplicationController
       render_404
     end
   end
+
+  def form_submit
+    new_params={}
+    params["data"].each {|x,y| new_params[y["name"]]=y["value"]}
+    mandatory_fields = params["validate"]
+    allowed_headers = params["fields"]
+    allowed_params = new_params.delete_if { |key, value| !(allowed_headers.include? key.to_s) }
+    flag = true
+    mandatory_fields.each {|x| flag = (flag && allowed_params[x].present?)}
+    @form_datum = FormDatum.new
+    @form_datum[:field] = allowed_params.to_json if flag
+    @form_datum[:value_of] = params[:field]
+    if @form_datum.save
+      render :text => "Success"
+    else
+      render :text => "Failed"
+    end
+  end
+
 end
