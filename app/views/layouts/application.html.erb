@@ -43,7 +43,6 @@
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"> -->
 <!--<script src="/bootstrap-3.3.6/js/bootstrap.min.js"></script>-->
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
 <!--<script src="/jquery-1.12.3.min.js"></script>-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -96,13 +95,18 @@
 <script>
     $(window).load(function() {
         $('.flexslider').flexslider({
-            animation : "slide",
-            animationSpeed : 2000,
+            animation : "fade",
+            animationSpeed : 1000,
             controlNav : false,
             easing : "swing",
             touch : true,
             pauseOnHover : true
         });
+        
+        $('a.menu-icon').click(function(event){
+	    	event.stopPropagation();
+	        $('.menu').toggle("slow");
+	    });
 
         $("#contact_pop").on('click',function(){
             console.log("asdf");
@@ -119,25 +123,38 @@
         /* wow script for animation */
         var wow = new WOW().init();
     });
-
-    $('.d-menu').click(function(){
-        $('.menu').toggle();
-    })
+    
+    $(window).scroll(function(){
+		total_height = $('.header-top').height();// - $('.menublock').height();
+		scroll_height = $(window).scrollTop();
+		windowWidth = $(window).width();
+		if(windowWidth<600)
+		{	
+			if(scroll_height > total_height)
+			{
+				$('.header-top').addClass('fixed');
+			}
+			else{
+				$('.header-top').removeClass('fixed');
+			}
+		}
+	});
+	
 </script>
 
 <% if ["contact-us", "home"].include? @page_properties[:page_name] %>
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Organization",
-  "name" : "Nesans Mining and Automation Private Limited",
-  "url" : "http://www.thenesans.com",
-  "sameAs" : [
-    "https://www.linkedin.com/company/nesans-mining-and-automation-private-limited/",
-    "https://plus.google.com/+ssengineersindiain"
-  ]
-}
-</script>
+ <script type="application/ld+json">
+ {
+   "@context" : "http://schema.org",
+   "@type" : "Organization",
+   "name" : "Nesans Mining and Automation Private Limited",
+   "url" : "http://www.thenesans.com",
+   "sameAs" : [
+     "https://www.linkedin.com/company/nesans-mining-and-automation-private-limited/",
+     "https://plus.google.com/+ssengineersindiain"
+   ]
+ }
+ </script>
 <% end %>
 
 </html>
