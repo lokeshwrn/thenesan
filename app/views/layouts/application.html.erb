@@ -68,7 +68,6 @@
     ga('create', 'UA-76983855-1', 'auto');
     ga('send', 'pageview');
 </script>
-
 <% unless @page_properties[:disable] %>
     <!--Selection disable script-->
     <script>
@@ -117,6 +116,22 @@
         $("#close_id").click(function(){
             $(".popup").hide();
         });
+        
+        var par = $(".product-content:last-child .product-parent").length;
+		if(par>0 && par<2)
+		{
+  			$(".product-content:last-child").addClass('product-without-slide');
+		}
+		
+		var current_parent;
+		$(".quest_block").click(function(){
+			$(".faq_answer").hide("5000");
+			$(this).children('.faq_answer').show("5000");
+		});
+		$("a.quit").click(function(event){
+			event.stopPropagation();
+			$(this).parent(".faq_answer").hide("5000");
+		});
     });
 
     $(window).load(function(){
@@ -150,7 +165,7 @@
    "name" : "Nesans Mining and Automation Private Limited",
    "url" : "http://www.thenesans.com",
    "sameAs" : [
-     "https://www.linkedin.com/company/nesans-mining-and-automation-private-limited/",
+    "https://www.linkedin.com/company/nesans-mining-and-automation-private-limited/",
      "https://plus.google.com/+ssengineersindiain"
    ]
  }
