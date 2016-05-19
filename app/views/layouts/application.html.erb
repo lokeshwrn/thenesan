@@ -117,20 +117,9 @@
             $(".popup").hide();
         });
         
-        var par = $(".product-content:last-child .product-parent").length;
-		if(par>0 && par<2)
-		{
-  			$(".product-content:last-child").addClass('product-without-slide');
-		}
-		
-		var current_parent;
 		$(".quest_block").click(function(){
-			$(".faq_answer").hide("5000");
-			$(this).children('.faq_answer').show("5000");
-		});
-		$("a.quit").click(function(event){
-			event.stopPropagation();
-			$(this).parent(".faq_answer").hide("5000");
+			$(this).children('.faq_answer').toggle("5000");
+            $(this).toggleClass('quest_block_active');
 		});
     });
 
