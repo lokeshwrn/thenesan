@@ -355,12 +355,12 @@ span.cs-placeholder{text-transform: capitalize;}
 /*FAQ_BLOCK*/
 .faq_block h3{text-align:left;font-size:24px;margin-bottom:5px;text-transform:initial;font-weight:lighter;}
 .faq_block h3:hover{color:inherit;}
-.quest_block{background-color:#FFF;padding:10px 20px 20px;margin-bottom:20px;border-radius:10px;}
-.quest_block:hover{background-color:#EEE;}
+.quest_block{background-color:#FFF;padding:10px 20px 10px;margin-bottom:20px;border-radius:10px;}
+.quest_block:hover, .quest_block_active{background-color:#EEE;}
 
 .faq_quest{cursor:pointer;}
 .faq_answer{display:none;padding:0 2%;text-align:right;}
-.faq_answer p{padding:10px 15px;background-color:#cce6ff;border-radius:10px;text-align:left;}
+.faq_answer p{padding:10px 15px;background-color:#cce6ff;border-radius:10px;text-align:left;margin-top:10px;}
 a.quit{font-size:14px;color:lightred;display:inline-block;margin-right:5px;color:#ff3333;border-radius:8px;padding:3px 8px;margin-bottom:5px;}
 a.quit:hover{background-color:#FFF;}
 
