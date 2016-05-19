@@ -71,6 +71,7 @@ $('form button').click(function(e){
                 var self = $(this), activatedClass = 'validate-err btn-error';
                 error_shake(self, activatedClass, 4000);
                 flag=false;
+                window.location=window.location.pathname+"#"+$(form).closest('#form').attr('class');
             }
         }
     });
