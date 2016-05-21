@@ -92,3 +92,20 @@ $('.another-form button').click(function(){
     $(main_div).find('.another-form').hide(1000);
 
 });
+
+// toggle password field type in login form
+$('.show_password').click(function(){
+    $(this).toggleClass('login_active');
+
+    var yes = $("#password_login").attr('type');
+    if(yes == 'password')
+    {
+        $('.label_password').text('Hide');
+        $("#password_login").attr('type','text');
+    }
+    else
+    {
+        $('.label_password').text('Show');
+        $("#password_login").attr('type','password');
+    }
+});
