@@ -369,7 +369,7 @@ a.quit:hover{background-color:#FFF;}
 /*LOGIN_BLOCK*/
 .login_block{text-align:center;}
 .login_block .ajax_message{background-color: #FF0033;border-radius: 5px;margin: 0 auto;width: 80%;}
-.login_block .ajax_message p{text-align:center;color:#fff;}
+.login_block .ajax_message p{text-align:center;color:#fff;font-weight:500!important;}
 .login_block form{width:60%;display:inline-block;}
 .login_block label span{display:none;} /* temporary */
 .login_field{margin-bottom:25px;}

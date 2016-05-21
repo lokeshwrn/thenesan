@@ -65,4 +65,14 @@ class HomeController < ApplicationController
     end
   end
 
+  def check_login
+    sleep(2);
+    @user=User.active.where("user_name = ? AND password = ?", params[:login][:user_name], params[:login][:password])
+    if @user.present?
+      render :json => {:status => true, :message => "Success"}
+    else
+      render :json => {:status => false, :message => "Failed"}
+    end
+  end
+
 end

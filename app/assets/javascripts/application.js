@@ -58,7 +58,7 @@ function reset_form_values(form){
 }
 
 // ajax submit and validate for form data table form
-$('form button').click(function(e){
+$('form[class="common_form"] button').click(function(e){
     var form = $(this).closest('#validate_form');
     var validate = $(form).find('#validate').val().split(" ");
     e.preventDefault();
@@ -108,4 +108,32 @@ $('.show_password').click(function(){
         $('.label_password').text('Show');
         $("#password_login").attr('type','password');
     }
+});
+
+//login form ajax submit
+$('.login_block button[name="commit"]').click(function(e){
+    e.preventDefault();
+    $(this).html('Please Wait...').attr("disabled", true).css("cursor","wait");
+    var user_name = $('.login_block input[id="user_name_login"]').val();
+    var password = $('.login_block input[id="password_login"]').val();
+    $.ajax({
+        type: "POST",
+        url: "/check-login",
+        data: {
+            "login": {
+                "user_name": user_name,
+                "password": password
+            }
+        },
+        dataType: "json",
+        success: function (data) {
+            if (data.status!=true) {
+                $('.ajax_message').show();
+                $('.login_block button[name="commit"]').html('LogIn').attr("disabled", false).css("cursor","pointer");
+            }
+            else{
+                window.location='/';
+            }
+        }
+    });
 });

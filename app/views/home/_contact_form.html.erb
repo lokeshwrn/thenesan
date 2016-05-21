@@ -3,7 +3,7 @@
     <div class="contact-left-form col-md-12 col-sm-12 col-xs-12 no-padding">
       <h4 id="project_enquiry">Project Enquiry</h4>
       <div id="form" class="project_enquiry">
-        <%= form_tag("/submit_enquiry", method: "post", multipart: true, id: "validate_form", :class=> "product_enquiry") do |f| %>
+        <%= form_tag("/submit_enquiry", method: "post", multipart: true, id: "validate_form", :class=> "common_form product_enquiry") do |f| %>
             <p>
               <%= text_field_tag 'name', nil, {class: "form-white", :placeholder => "Name *"} %>
             </p>
@@ -49,7 +49,7 @@
       <h4 id="machine_enquiry">Individual Machine Enquiry</h4>
 
       <div id="form" class="machine_enquiry">
-        <%= form_tag("/submit_enquiry", method: "post", multipart: true, id: "validate_form", :class=> "product_enquiry") do |f| %>
+        <%= form_tag("/submit_enquiry", method: "post", multipart: true, id: "validate_form", :class=> "common_form product_enquiry") do |f| %>
             <p>
               <%= text_field_tag 'name', nil, {class: "form-white", :placeholder => "Name *"} %>
             </p>

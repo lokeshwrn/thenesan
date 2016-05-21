@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root 'home#index'
 
   # site-side routes
+  get '/login', :to => 'home#login'
+  post '/check-login', :to => 'home#check_login'
+
   get '/products', :to => 'home#products_listing'
   get '/contact-us', :to => 'home#contact_us'
   get '/about-us', :to => 'home#about_us'
@@ -16,6 +19,8 @@ Rails.application.routes.draw do
   get '/:article_url', :to => 'home#static_page'
 
   post '/submit_enquiry', :to => 'home#form_submit'
+
+
 
   # admin-side routes
   get 'admin/articles', :to => 'admin#list_articles', :as => 'list_articles'
