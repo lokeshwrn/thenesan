@@ -67,8 +67,15 @@ class HomeController < ApplicationController
 
   def check_login
     sleep(2);
-    @user=User.active.where("user_name = ? AND password = ?", params[:login][:user_name], params[:login][:password])
+    @user=User.active.where("user_name = ? OR email_id = ?", params[:login][:user_name], params[:login][:user_name]).where("password = ?", params[:login][:password]).first
     if @user.present?
+      @user.update_column("last_login", Time.now)
+      cookies["logged_in"]=true
+      if params[:login][:remember_me].present?
+        val=Digest::MD5.hexdigest(@user.user_name)
+        @user.update_column('unicode_data', val)
+        cookies["remember_me"] = {:value => val, :expires => Time.now+3.months}
+      end
       render :json => {:status => true, :message => "Success"}
     else
       render :json => {:status => false, :message => "Failed"}

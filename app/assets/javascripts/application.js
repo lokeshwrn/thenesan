@@ -114,15 +114,17 @@ $('.show_password').click(function(){
 $('.login_block button[name="commit"]').click(function(e){
     e.preventDefault();
     $(this).html('Please Wait...').attr("disabled", true).css("cursor","wait");
-    var user_name = $('.login_block input[id="user_name_login"]').val();
-    var password = $('.login_block input[id="password_login"]').val();
+    var user_name=$('.login_block input[id="user_name_login"]').val();
+    var password=$('.login_block input[id="password_login"]').val();
+    var rem_me="";
     $.ajax({
         type: "POST",
         url: "/check-login",
         data: {
             "login": {
                 "user_name": user_name,
-                "password": password
+                "password": password,
+                "remember_me":rem_me
             }
         },
         dataType: "json",
