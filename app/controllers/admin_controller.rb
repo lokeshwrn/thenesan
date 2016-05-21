@@ -37,7 +37,7 @@ class AdminController < ApplicationController
   end
 
   def list_articles
-    @articles = Article.by_type(["Article", "Static-Page"]).order('product_id desc')
+    @articles = Article.by_type(["Article", "Static-Page"]).order('product_id')
     @page_properties[:header] = "Article Listing"
   end
 
