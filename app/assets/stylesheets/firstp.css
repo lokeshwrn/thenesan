@@ -344,6 +344,7 @@ span.cs-placeholder{text-transform: capitalize;}
 .site_map .nav li.active a{color:#0080ff;}
 .site_map .nav li:hover a{background-color:lightgray;}
 .site_map .nav li.active:hover a{background-color:#FFF;z-index:10;}
+.site_map .nav li::before{content:"";font-size:0px;margin:0;}
 /*.site_map .nav li a:focus{border-bottom:1px solid #0080ff;}*/
 .site_map h3{margin-bottom:20px;}
 .site_map h3:hover{color:inherit;}
