@@ -36,6 +36,8 @@
 <!-- center align div on odd count -->
 <% if @products.count % 2 == 1 %>
 <script>
+$(document).ready(function(){
 	$('.product-content:last-child').addClass('product-without-slide');
+	});
 </script>
 <% end %>
