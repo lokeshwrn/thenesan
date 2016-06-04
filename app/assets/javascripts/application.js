@@ -58,7 +58,7 @@ function reset_form_values(form){
 }
 
 // ajax submit and validate for form data table form
-$('form[class="common_form"] button').click(function(e){
+$('form.common_form button').click(function(e){
     var form = $(this).closest('#validate_form');
     var validate = $(form).find('#validate').val().split(" ");
     e.preventDefault();
