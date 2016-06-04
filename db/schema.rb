@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160521132121) do
+ActiveRecord::Schema.define(version: 20160528141423) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -29,6 +29,18 @@ ActiveRecord::Schema.define(version: 20160521132121) do
     t.string   "banner_url"
     t.string   "page_title"
     t.string   "meta_data"
+  end
+
+  create_table "assets", force: :cascade do |t|
+    t.string   "title"
+    t.string   "alias_name"
+    t.boolean  "status",          default: true
+    t.string   "access"
+    t.integer  "access_code"
+    t.string   "location"
+    t.integer  "sequence_number"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "form_data", force: :cascade do |t|

@@ -1,0 +1,35 @@
+<div class="container-block col-md-12 col-sm-12 col-xs-12 no-padding">
+  <div class="summary-block col-md-12 col-sm-12 col-xs-12 no-padding">
+    <div class="container no-padding">
+      <div class="row no-margin">
+
+        <div class="content col-md-12 col-sm-12 col-xs-12 no-padding">
+          <h3 class="title"><a>Downloads</a></h3>
+
+          <% @assets.each do |asset| %>
+              <div class="download-block col-md-3 col-sm-4 col-xs-6 no-padding">
+                <a href="/download/<%= asset.alias_name %>">
+                  <img src="/images/<%= get_file_img(asset.title.split('.').last) %>"/>
+                  <p><%= asset.title %></p>
+                </a>
+              </div>
+          <% end %>
+
+        </div><!--CONTENT-->
+
+      </div><!--ROW-->
+    </div><!--CONTAINER-->
+  </div><!--SUMMARY-BLOCK-->
+</div><!--CONTAINER-BLOCK-->
+
+<style>
+    .download-block{
+        text-align: center;
+        padding: 25px;
+    }
+    .download-block img{
+        float:none;
+        display: inline-block;
+        max-width:50%;
+    }
+</style>

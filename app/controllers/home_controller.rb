@@ -65,7 +65,7 @@ class HomeController < ApplicationController
     end
   end
 
-  def check_login
+  def verify_login
     sleep(2);
     @user=User.active.where("user_name = ? OR email_id = ?", params[:login][:user_name], params[:login][:user_name]).where("password = ?", params[:login][:password]).first
     if @user.present?
@@ -79,6 +79,38 @@ class HomeController < ApplicationController
       render :json => {:status => true, :message => "Success"}
     else
       render :json => {:status => false, :message => "Failed"}
+    end
+  end
+
+  def downloads
+    @assets=Asset.active
+  end
+
+  def get_file
+    asset=Asset.find_by_alias_name(params[:alias_name])
+    if asset.present?
+      if asset.access_code <= params[:access_code].to_i
+        send_file "#{Rails.root}/#{asset.location}"
+      else
+        redirect_to get_access_code_url, :alias_name=>params[:alias_name]
+      end
+    else
+      redirect_to root_url
+    end
+  end
+
+  def get_access_code
+    @page_properties.merge!({:header=> "Enter Access Code"})
+    render "home/download_page"
+  end
+
+  def validate_key
+    sleep(1)
+    user = User.find_by_random_key(params[:id].downcase)
+    if user.present?
+      render :json => {:status => true, :id => user.role.access_code, :file=>params[:file]}
+    else
+      render :json => {:status => false, :message => "Invalid Key. Please Enter a valid one"}
     end
   end
 

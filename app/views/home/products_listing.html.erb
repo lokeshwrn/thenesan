@@ -4,25 +4,27 @@
       <div class="row no-margin">
 
         <div class="content col-md-12 col-sm-12 col-xs-12 no-padding">
-	        <h3 class="title"><a>our Products</a></h3>
+          <h3 class="title"><a>our Products</a></h3>
 
           <% @products.each_slice(2).each do |products|%>
 
-            <div class="product-content col-md-12 col-sm-12 col-xs-12 no-padding">
-              <% products.each do |product|%>
+              <div class="product-content col-md-12 col-sm-12 col-xs-12 no-padding">
+                <% products.each do |product|%>
 
-                <div class="product-parent col-md-6 col-sm-6 col-xs-12 no-padding">
-                  <div class="product col-md-12 col-sm-12 col-xs-12 no-padding">
-                    <div class="image-content col-md-12 col-sm-12 col-xs-12 no-padding">
-                      <a href="/products/<%= product.alias_url %>"><img src="<%= product.img_url%>" alt="product-img" class="img-responsive"></a>
-                      <a href="/products/<%= product.alias_url %>" class="text-content">
-                        <span><%= product.name %></span> </a>
-                    </div><!--IMAGE-CONTENT-->
-		    
-                  </div><!--PRODUCT-->
-                </div><!--PRODUCT-PARENT-->
-              <% end %>
-            </div><!--PRODUCT-CONTENT-->
+                    <div class="product-parent col-md-6 col-sm-6 col-xs-12 no-padding">
+                      <div class="product col-md-12 col-sm-12 col-xs-12 no-padding">
+                        <div class="image-content col-md-12 col-sm-12 col-xs-12 no-padding">
+                          <a href="/products/<%= product.alias_url %>"><img src="<%= product.img_url%>" alt="product-img" class="img-responsive"></a>
+                          <a href="/products/<%= product.alias_url %>" class="text-content">
+                            <span><%= product.name %></span> </a>
+                        </div><!--IMAGE-CONTENT-->
+
+                      </div><!--PRODUCT-->
+                    </div><!--PRODUCT-PARENT-->
+
+                <% end %>
+              </div><!--PRODUCT-CONTENT-->
+
           <% end %>
 
         </div><!--CONTENT-->
@@ -30,14 +32,13 @@
       </div><!--ROW-->
     </div><!--CONTAINER-->
   </div><!--PRODUCT-BLOCK-->
-
 </div><!--CONTAINER-BLOCK-->
 
 <!-- center align div on odd count -->
 <% if @products.count % 2 == 1 %>
-<script>
-$(document).ready(function(){
-	$('.product-content:last-child').addClass('product-without-slide');
-	});
-</script>
+    <script>
+        $(document).on("ready", function(){
+            $('.product-content:last-child').addClass('product-without-slide');
+        });
+    </script>
 <% end %>

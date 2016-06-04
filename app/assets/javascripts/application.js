@@ -119,7 +119,7 @@ $('.login_block button[name="commit"]').click(function(e){
     var rem_me="";
     $.ajax({
         type: "POST",
-        url: "/check-login",
+        url: "/verify-login",
         data: {
             "login": {
                 "user_name": user_name,

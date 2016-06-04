@@ -5,21 +5,26 @@ Rails.application.routes.draw do
   root 'home#index'
 
   # site-side routes
+  get '/content' => 'home#download_page'
+
   get '/login', :to => 'home#login'
-  post '/check-login', :to => 'home#check_login'
+  post '/verify-login', :to => 'home#verify_login'
+  post '/submit_enquiry', :to => 'home#form_submit'
 
   get '/products', :to => 'home#products_listing'
   get '/contact-us', :to => 'home#contact_us'
   get '/about-us', :to => 'home#about_us'
   get '/spares', :to => 'home#spares'
   get '/showroom', :to => 'home#showroom'
+  get '/downloads' => 'home#downloads'
+
+  # dynamic routes
   get '/products/:product_url', :to => 'home#products'
   get '/products/:product_url/:article_url', :to => 'home#articles'
-
   get '/:article_url', :to => 'home#static_page'
-
-  post '/submit_enquiry', :to => 'home#form_submit'
-
+  get '/validate_key/:id' => 'home#validate_key'
+  get '/get_access_code/:alias_name' => 'home#get_access_code', :as => 'get_access_code'
+  get '/download/:alias_name(/:access_code)' => 'home#get_file'
 
 
   # admin-side routes
