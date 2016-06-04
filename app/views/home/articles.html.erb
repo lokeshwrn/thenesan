@@ -6,7 +6,9 @@
         <div class="content col-md-12 col-sm-12 col-xs-12 no-padding">
           <h3 class="title">
             <a><%= @article.title %></a>
-            <div class="addthis_sharing_toolbox"></div>
+            <% if @article.article_type == "Article" %>
+                <div class="addthis_sharing_toolbox"></div>
+            <% end %>
           </h3>
 
           <div class="summary-text col-md-12 col-sm-12 col-xs-12 no-padding">
