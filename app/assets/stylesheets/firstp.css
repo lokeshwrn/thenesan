@@ -171,6 +171,7 @@ header{overflow:hidden;}
 .info-block h3.big{margin-bottom:6%;}
 .info-block.odd{background-color:#FFF;}
 .info-block .image-block img{/*border:2px solid #0066CC; */min-height:450px;}
+.info-block:last-child .image-block img{min-height:600px;}
 /*.info-block .image-block:hover img{border:1px solid #0066CC;}*/
 .info-block p{color:#FFF;margin-bottom:30px;}
 .info-block p::first-letter{font-size:32px;font-weight:bold;}
@@ -383,6 +384,8 @@ a.quit:hover{background-color:#FFF;}
 .login_field .show_password.login_active{background-color:#b3b3b3;}
 .login_block .button_input .btn{padding:10px 10px;min-width:140px;}
 
+.register_block form{width:90%;display:inline-block;}
+.register_block .login_field:nth-of-type(2) label{text-align:right;}
 
 /*FOOTER*/
 .footer{ background-color:rgb(74,77,81); padding:4.5% 0 0;}
@@ -534,7 +537,7 @@ a.quit:hover{background-color:#FFF;}
 	.info-block.even .text-block{padding-right:0;}
 	.info-block .text-block h3{margin-top:0;margin-bottom:20px;line-height:34px;}
 	.info-block p{margin-bottom:10px;}
-	.info-block .image-block img{min-height:0;height:auto;}
+	.info-block .image-block img,.info-block:last-child .image-block img{min-height:0;height:auto;}
 	
 	.about-us-head{padding:1% 0 2%;}
 	.about-us-head h4{padding:0.5%;}
@@ -632,7 +635,7 @@ a.quit:hover{background-color:#FFF;}
     .info-block p::first-letter{font-size:26px;}
 	.info-block.odd .text-block h3,.info-block.even .text-block h3{text-align:center;}
 	.info-block.odd .read-more,.info-block.even .read-more{text-align:center;}
-	.info-block .image-block img{min-height:0;height:auto;}
+	.info-block .image-block img,.info-block:last-child .image-block img{min-height:0;height:auto;}
 
 	.product-content{padding:2% 0;}
 	.product-content .product-parent{margin-bottom:7%;}
@@ -689,6 +692,8 @@ a.quit:hover{background-color:#FFF;}
 	.faq_block h3{font-size:20px;font-weight:normal;}
 	.quest_block{padding:5px 5px 10px;margin-bottom:10px;background-color:#EEE;}
 	.faq_answer p{padding:5px 10px;}
+	
+	.register_block .login_field:nth-of-type(2) label{text-align:left;}
 	
 	.footer{padding:6% 0 0;}
 	.footer-top{padding-bottom:6%;}
