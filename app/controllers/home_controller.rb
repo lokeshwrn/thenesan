@@ -82,6 +82,22 @@ class HomeController < ApplicationController
     end
   end
 
+
+  def verify_register
+    user=User.active.where("user_name = ? OR email_id = ?", params[:user][:user_name], params[:user][:user_name])
+    if user.present?
+      render :json => {:status => false, :message => "User Already Exists"}
+    else
+      user=User.new(register_params)
+      debugger
+      if user.save
+        render :json => {:status => true, :message => "Registration Successful"}
+      else
+        render :json => {:status => false, :message => "Registration Failed"}
+      end
+    end
+  end
+
   def downloads
     @assets=Asset.active
   end
@@ -112,6 +128,12 @@ class HomeController < ApplicationController
     else
       render :json => {:status => false, :message => "Invalid Key. Please Enter a valid one"}
     end
+  end
+
+  private
+
+  def register_params
+    params.require(:user).permit(:first_name, :user_name, :email_id, :password, :role)
   end
 
 end

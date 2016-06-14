@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   validates :user_name, :presence => true, :uniqueness => true
   validates :email_id, :uniqueness => true
-  validates :phone, :uniqueness => true
+  validates :phone, :uniqueness => true, :allow_nil => true
   validates :password, :presence => true
   validates :role, :presence => true
 

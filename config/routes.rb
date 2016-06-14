@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   get '/content' => 'home#download_page'
 
   get '/login', :to => 'home#login'
+  get '/register', :to => 'home#register'
   post '/verify-login', :to => 'home#verify_login'
+  post '/verify-register', :to => 'home#verify_register'
+
   post '/submit_enquiry', :to => 'home#form_submit'
 
   get '/products', :to => 'home#products_listing'

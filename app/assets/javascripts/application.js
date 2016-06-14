@@ -111,7 +111,7 @@ $('.show_password').click(function(){
 });
 
 //login form ajax submit
-$('.login_block button[name="commit"]').click(function(e){
+$('#verify-login').click(function(e){
     e.preventDefault();
     $(this).html('Please Wait...').attr("disabled", true).css("cursor","wait");
     var user_name=$('.login_block input[id="user_name_login"]').val();
@@ -131,7 +131,7 @@ $('.login_block button[name="commit"]').click(function(e){
         success: function (data) {
             if (data.status!=true) {
                 $('.ajax_message').show();
-                $('.login_block button[name="commit"]').html('LogIn').attr("disabled", false).css("cursor","pointer");
+                $('#verify-login').html('LogIn').attr("disabled", false).css("cursor","pointer");
             }
             else{
                 window.location='/';
@@ -139,3 +139,42 @@ $('.login_block button[name="commit"]').click(function(e){
         }
     });
 });
+
+//login form ajax submit
+$('#register').click(function(e){
+    e.preventDefault();
+    $(this).html('Please Wait...').attr("disabled", true).css("cursor","wait");
+    var user_name=$('.login_block input[id="user_name_register"]').val();
+    var password=$('.login_block input[id="password_login"]').val();
+    var first_name=$('.login_block input[id="first_name_register"]').val();
+    var email_id=$('.login_block input[id="email_register"]').val();
+    var role="user";
+    $.ajax({
+        type: "POST",
+        url: "/verify-register",
+        data: {
+            "user": {
+                "user_name": user_name,
+                "password": password,
+                "first_name": first_name,
+                "email_id": email_id,
+                "role": role
+            }
+        },
+        dataType: "json",
+        success: function (data) {
+            $('.ajax_message p').html(data.message).show();
+            if (data.status!=true) {
+                $('#register').html('Register').attr("disabled", false).css("cursor","pointer");
+            }
+            else{
+                setTimeout(delay, 3000);
+                window.location='/';
+            }
+        }
+    });
+});
+
+function delay() {
+    console.log("delayed");
+}
