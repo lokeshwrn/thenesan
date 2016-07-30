@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  ## API routes
+  get '/api/v1/iot' => 'home#api_data'
+
+
   # site-side routes
   get '/content' => 'home#download_page'
 
