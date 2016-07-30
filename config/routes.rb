@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   ## API routes
-  get '/api/v1/iot' => 'home#api_data'
+  get '/api/v1/iot/:sensor_1/:sensor_2' => 'home#api_data'
 
 
   # site-side routes
