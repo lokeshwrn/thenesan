@@ -1,16 +1,5 @@
 class HomeController < ApplicationController
 
-  def api_data
-    new_params=params.permit(:sensor_1, :sensor_2, :sensor_3, :sensor_4)
-    sensor=Sensor.new(new_params)
-    if sensor.save
-      render :text => 'true'
-    else
-      render :text => 'false'
-    end
-  end
-
-
   def index
     @page_properties.merge!({:carousel => true, :page_title => "Nesans Mining and Automation Pvt Ltd | Stone Crusher Plant, Crusher Machine, Vibrating Screen, Vibratory Feeder, Sand Making Machine", :page_name => "home"})
   end
