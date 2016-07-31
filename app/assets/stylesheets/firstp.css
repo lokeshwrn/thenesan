@@ -163,7 +163,7 @@ header{overflow:hidden;}
 /*.description-parent:hover .mini-desc{background-color: #0066CC;}*/
 .description-parent:hover{transform:scale(1.1,1.1);}
 .description-parent:hover .mini-desc h4 a,.description-parent:hover .mini-desc p{color:#fff;z-index:10;}
-.description-parent:hover .mini-desc span{height:100%;}
+.description-parent:hover .mini-desc span{height:100%;z-index: -1;}
 
 /*INFO-BLOCK*/
 .article-block,.info-block{padding:5% 0;}

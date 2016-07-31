@@ -82,7 +82,6 @@ class HomeController < ApplicationController
     end
   end
 
-
   def verify_register
     user=User.active.where("user_name = ? OR email_id = ?", params[:user][:user_name], params[:user][:user_name])
     if user.present?
