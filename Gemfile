@@ -14,7 +14,7 @@ end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'hirb'
-
+gem 'heroku'
 gem 'tzinfo-data'
 
 
