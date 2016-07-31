@@ -114,6 +114,7 @@ header{overflow:hidden;}
 .banner-without-slide ul li img{height:100%;}
 .banner-text{background-color:#0066cc;padding-top:6%;height:300px;}
 .banner-text h2{color:#FFF;}
+.banner-text h2 a{color:#FFF;}
 
 .design1 .banner-content{background-color:transparent;top:10%;bottom:auto;width:75%;}
 .design1 .banner-content h2{font-size:80px;text-align:left;}
