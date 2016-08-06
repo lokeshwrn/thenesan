@@ -66,7 +66,7 @@ class HomeController < ApplicationController
   end
 
   def verify_login
-    sleep(2);
+    sleep(2)
     @user=User.active.where("user_name = ? OR email_id = ?", params[:login][:user_name], params[:login][:user_name]).where("password = ?", params[:login][:password]).first
     if @user.present?
       @user.update_column("last_login", Time.now)
