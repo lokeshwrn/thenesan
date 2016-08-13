@@ -7,14 +7,14 @@
     <th>Created At</th>
     <th>Updated At</th>
   </tr>
-  <tr>
     <% @sensor.each do |x| %>
-        <td><%= x.sensor_1 || "nil" %></td>
+      <tr>
+      <td><%= x.sensor_1 || "nil" %></td>
         <td><%= x.sensor_2 || "nil" %></td>
         <td><%= x.sensor_3 || "nil" %></td>
         <td><%= x.sensor_4 || "nil" %></td>
         <td><%= x.created_at %></td>
         <td><%= x.updated_at %></td>
+      </tr>
     <% end %>
-  </tr>
 </table>
