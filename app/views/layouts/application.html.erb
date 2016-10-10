@@ -3,7 +3,6 @@
 <head>
 
     <%#= @article.page_title ||= @page_properties[:page_title] rescue @page_properties[:page_title] %>
-
   <title>
     <%= content_for?(:title) ? yield(:title) : @page_properties[:page_title] %>
   </title>
