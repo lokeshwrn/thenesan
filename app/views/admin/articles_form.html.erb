@@ -13,54 +13,60 @@
 
         <%= form_for @articles, url: articles_path, html: { autocomplete: "off" } do |f| %>
 
-          <%= f.hidden_field 'id', :value => @articles.id %>
+            <%= f.hidden_field 'id', :value => @articles.id %>
 
-          <p class="form--left">
-            <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title'%>
-          </p>
-          <p class="form--right">
-            <%= f.text_field :description, :class => 'form-white', :placeholder => 'Description' %>
-          </p>
-          <p class="form--left">
-            <%= f.text_field :alias_url, :class => 'form-white', :placeholder => 'Alias URL' %>
-          </p>
-          <p class="form--right">
-            <%= f.text_field :img_url, :class => 'form-white', :placeholder => 'Image URL' %>
-          </p>
-          <p class="form--left">
-            <%= f.text_field :banner_url, :class => 'form-white', :placeholder => 'Banner Image URL' %>
-          </p>
-          <p class="form--right">
-            <%= f.text_field :banner_text, :class => 'form-white', :placeholder => 'Banner Content' %>
-          </p>
+            <p class="form--left">
+              <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title'%>
+            </p>
+            <p class="form--right">
+              <%= f.text_field :description, :class => 'form-white', :placeholder => 'Description' %>
+            </p>
+            <p class="form--left">
+              <%= f.text_field :alias_url, :class => 'form-white', :placeholder => 'Alias URL' %>
+            </p>
+            <p class="form--right">
+              <%= f.text_field :img_url, :class => 'form-white', :placeholder => 'Image URL' %>
+            </p>
+            <p class="form--left">
+              <%= f.text_field :banner_url, :class => 'form-white', :placeholder => 'Banner Image URL' %>
+            </p>
+            <p class="form--right">
+              <%= f.text_field :banner_text, :class => 'form-white', :placeholder => 'Banner Content' %>
+            </p>
             <p class="form--left">
               <%= f.text_field :page_title, :class => 'form-white', :placeholder => 'Page Title' %>
             </p>
             <p class="form--right">
-              <%= f.text_field :meta_data, :class => 'form-white', :placeholder => 'Meta Data' %>
+              <%= f.text_field :meta_keywords, :class => 'form-white', :placeholder => 'Meta Keywords' %>
             </p>
-          <p class="form--left">
-            <%= f.text_field :sequence_number, :class => 'form-white', :placeholder => 'Sequence Number' %>
-          </p>
-          <p class="form--right">
-            <%#= f.text_field :content_url, :class => 'form-white', :placeholder => 'Content URL' %>
-            <%= select_tag "article[article_type]", options_for_select(["Article", "Static-Page"], @articles.article_type), :class => "cs-select cs-skin-elastic" %>
-          </p>
-          <p class="form--left">
-            <%#= select_tag "article[article_type]", options_for_select([ "Services", "Modules"],@articles.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Type--" %>
-            <%= collection_select :article, :product_id, Product.all, :id, :name, options={:selected => @articles.product.try(:id), :include_blank => '--Product Type--'}, {:class=>"cs-select cs-skin-elastic"} %>
-          </p>
-          <p class="form--right">
-            <%= select_tag "article[status]", options_for_select([true, false],@articles.status), :class => "cs-select cs-skin-elastic", prompt: "--Status--" %>
-          </p>
-          <p class="form--content">
-            <%#= f.text_area :content, :class => 'form-white', :placeholder => 'Content', :rows => 5 %>
-            <%= f.text_area :content, class: "tinymce", :placeholder => 'Content' %>
-          </p>
-          <p class="align_right">
-            <%#= f.submit "Create Article", :class => "submit_btn" %>
-            <button class="btn btn-3 btn-3e icon-plus-create" value="Create Article" name="commit"> Submit Article </button>
-          </p>
+            <p class="form--left">
+              <%= f.text_field :meta_title, :class => 'form-white', :placeholder => 'Meta Title' %>
+            </p>
+            <p class="form--right">
+              <%= f.text_field :meta_description, :class => 'form-white', :placeholder => 'Meta Description' %>
+            </p>
+            <p class="form--left">
+              <%= f.text_field :sequence_number, :class => 'form-white', :placeholder => 'Sequence Number' %>
+            </p>
+            <p class="form--right">
+              <%#= f.text_field :content_url, :class => 'form-white', :placeholder => 'Content URL' %>
+              <%= select_tag "article[article_type]", options_for_select(["Article", "Static-Page"], @articles.article_type), :class => "cs-select cs-skin-elastic" %>
+            </p>
+            <p class="form--left">
+              <%#= select_tag "article[article_type]", options_for_select([ "Services", "Modules"],@articles.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Type--" %>
+              <%= collection_select :article, :product_id, Product.all, :id, :name, options={:selected => @articles.product.try(:id), :include_blank => '--Product Type--'}, {:class=>"cs-select cs-skin-elastic"} %>
+            </p>
+            <p class="form--right">
+              <%= select_tag "article[status]", options_for_select([true, false],@articles.status), :class => "cs-select cs-skin-elastic", prompt: "--Status--" %>
+            </p>
+            <p class="form--content">
+              <%#= f.text_area :content, :class => 'form-white', :placeholder => 'Content', :rows => 5 %>
+              <%= f.text_area :content, class: "tinymce", :placeholder => 'Content' %>
+            </p>
+            <p class="align_right">
+              <%#= f.submit "Create Article", :class => "submit_btn" %>
+              <button class="btn btn-3 btn-3e icon-plus-create" value="Create Article" name="commit"> Submit Article </button>
+            </p>
 
         <% end %>
 
