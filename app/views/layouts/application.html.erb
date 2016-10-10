@@ -3,9 +3,7 @@
 <head>
 
     <%#= @article.page_title ||= @page_properties[:page_title] rescue @page_properties[:page_title] %>
-  <title>
-    <%= content_for?(:title) ? yield(:title) : @page_properties[:page_title] %>
-  </title>
+  <%= yield_page_title %>
 
   <meta charset="UTF-8">
   <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -13,9 +11,9 @@
   <meta name="google-site-verification" content="Bi9RrRAR7drDCVv1gcXbP1Ge0CrSPilZfJn7lpjWg88" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0" />
 
-  <meta name='title' content='<%= yield_meta_tag(:title, 'Nesans O&M') %>' />
-  <meta name='keywords' content='<%= yield_meta_tag(:keywords, 'Nesans, Mining, Automation') %>' />
-  <meta name='description' content='<%= yield_meta_tag(:description, 'Nesans Mining and Automation Private Limited') %>' />
+  <%= yield_meta_tag(:title) %>
+  <%= yield_meta_tag(:keywords) %>
+  <%= yield_meta_tag(:description) %>
 
   <%= csrf_meta_tags %>
 
