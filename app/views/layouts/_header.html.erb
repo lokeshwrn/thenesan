@@ -42,10 +42,23 @@
 
           <ul class="menu">
             <li><a href="/">HOME</a></li>
-            <li><a href="/products">PRODUCTS</a></li>
-            <li><a href="/about-us">NESANS OEM</a></li>
+            <li id="product-parent"><a href="/products">PRODUCTS</a>
+              <ul class="second_menu" id="product-child">
+                <% Product.all.active.each do |prod| %>
+                    <li>
+                      <a href="<%= prod.alias_url%>"><%= prod.name %></a>
+                      <ul class="third_menu">
+                        <% prod.articles.each do |art| %>
+                            <li><a href="<%= art.alias_url %>"><%= art.title %></a></li>
+                        <% end %>
+                      </ul>
+                    </li>
+                <% end %>
+              </ul>
+            </li>
+            <li><a href="/about-us">ABOUT US</a></li>
             <!--<li><a href="/spares">SPARES</a></li>-->
-            <li><a href="/showroom">SHOWROOM</a></li>
+            <!--<li><a href="/showroom">SHOWROOM</a></li>-->
             <li><a href="/contact-us">CONTACT US</a></li>
           </ul>
         </div>
@@ -53,6 +66,41 @@
       </div><!--ROW-->
     </div><!--CONTAINER-->
   </div><!--HEADER-TOP-->
+
+  <style>
+    ul.second_menu{
+      left:0;
+      top: 100%;
+    }
+    ul.second_menu, ul.third_menu{
+      display: none;
+      position: absolute;
+      z-index: 1000;
+      transition:all 0.6s ease-in;
+      width: 100%!important;
+    }
+    ul.third_menu{
+      left: 100%;
+      top: 0;
+    }
+    ul.menu li{
+      position: relative;
+    }
+    ul.second_menu li{
+      display: block!important;
+      color:#000;
+      background: #fff;
+    }
+  </style>
+
+  <script>
+    $("ul.menu li").mouseenter(function(){
+      $(this).children("ul").css("display", "block");
+    });
+    $("ul.menu li").mouseleave(function(){
+      $(this).children("ul").css("display", "none");
+    });
+  </script>
 
   <!--<div class="menublock col-md-12 col-sm-12 col-xs-12">
     <div class="container no-padding">

@@ -52,13 +52,13 @@ header{overflow:hidden;}
 
 .menublock{padding:0.5% 2%;background-color:rgba(255,255,255,0.5);/*height:60px;*/font-family: 'Josefin Sans', sans-serif;}
 .menublock ul{list-style-type:none;margin:0;text-align:center;/*transition: all 0.3s linear 0s;*/}
-.menublock ul li{font-size:15px;padding:0px 6px;display:inline-block;min-width:100px;border-top:1px solid #DADADA;border-right:1px solid #DADADA;border-bottom:1px solid #DADADA;}
-.menublock ul li:first-child{border-left:1px solid #DADADA;}
+.menublock ul li{font-size:15px;padding:0px 6px;display:inline-block;min-width:175px;border-top:1px solid #DADADA;border-right:1px solid #DADADA;border-bottom:1px solid #DADADA;}
+.menublock ul.menu li:first-child, .menublock ul.submenu li{border-left:1px solid #DADADA;}
 .menublock ul li a{color:#000;padding:11px 12px 10px;display:block;position:relative;}
 /*.menublock ul li a::after{content:"";position:absolute;top:0;left:0;height:3px;width:0;background-color:#0066CC;transition:all 0.2s ease-in 0s;}
 .menublock ul li:hover a::after{width:100%;}*/
 .menublock ul li:hover,.menublock ul li.active{background-color:#0066CC; }
-.menublock ul li:hover a,.menublock ul li.active a{color:#FFF;}
+.menublock ul li:hover > a, .menublock ul li.active > a{color:#FFF;}
 
 .d-menu{display:none;}
 .menu-icon{background:url("/image/menu-icon1.png") no-repeat scroll 0 0;background-size:100% 100%;width:35px;height:35px;padding:17px;display:block;outline:none;transition:all 0.2s ease-in;}
@@ -148,23 +148,11 @@ header{overflow:hidden;}
 .intro-block p{line-height:34px;text-align:justify;color:#000;}
 
 /*DESCRIPTION-BLOCK*/
-.description-block{padding:5% 0;
-    background: #5eaae5; /* Old browsers */
-    background: -moz-linear-gradient(top,  #5eaae5 0%, #1e75cc 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #5eaae5 0%,#1e75cc 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #5eaae5 0%,#1e75cc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-   /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5eaae5', endColorstr='#1e75cc',GradientType=0 ); /* IE6-9 */
-}
-.description-parent{width:20%;float:left;padding:0 10px;transition:all 0.3s ease-in;}
-.mini-desc{border:1px solid #fff;text-align: center;padding:10px 10px;min-height:400px;position:relative;cursor: pointer;}
-.mini-desc h4{margin:15px 0;color:#fff;text-transform: uppercase;}
+.description-block{padding:5% 0; }
+.mini-desc{border:1px solid #000;text-align: center;padding:10px 10px;}
+.mini-desc h4{margin:15px 0;color:#000;text-transform: uppercase;}
 .mini-desc h4 a{color:#fff;position: relative;}
-.mini-desc p{font-size:16px;position: relative;color:#fff;}
-.mini-desc span{position:absolute;bottom:0;left:0;width:100%;height:5px;background-color: #4da6ff;z-index:0;transition:all 0.3s linear;}
-/*.description-parent:hover .mini-desc{background-color: #0066CC;}*/
-.description-parent:hover{transform:scale(1.1,1.1);}
-.description-parent:hover .mini-desc h4 a,.description-parent:hover .mini-desc p{color:#fff;z-index:10;}
-.description-parent:hover .mini-desc span{height:100%;z-index: -1;}
+.mini-desc p{font-size:16px;position: relative;color:#000;}
 
 /*INFO-BLOCK*/
 .article-block,.info-block{padding:5% 0;}
@@ -549,9 +537,8 @@ a.quit:hover{background-color:#FFF;}
 
     .description-block{padding:5% 0 1%;}
     .description-content{text-align:center;}
-    .description-parent{width:33%;float:none;display:inline-block;vertical-align:top;margin-bottom:30px;}
     .mini-desc{min-height:366px;}
-    .mini-desc p{font-size:15px;            }
+    .mini-desc p{font-size:15px;}
 
     .time-block{width:100%;}
     .time-block .timeline{float:right;}
@@ -654,7 +641,6 @@ a.quit:hover{background-color:#FFF;}
     
     .description-block{padding:5% 0 7%;}
     .description-content{text-align:center;padding:0 2%;}
-    .description-parent{width:48.5%;float:none;display:inline-block;vertical-align:top;margin-top:20px;min-height:200px;}
     .mini-desc{min-height: 260px;}
     .mini-desc p{font-size:14px;}
 	
@@ -734,8 +720,6 @@ a.quit:hover{background-color:#FFF;}
 	.info-block p{margin-bottom:20px;}
 
     .description-block{padding:5% 0 10%;}
-    .description-parent{width:100%;min-height:0;height:auto;}
-    .description-parent:hover{transform:scale(1,1);}
     .mini-desc{min-height:0;height:auto;}
     .mini-desc span{display:none;}
 	

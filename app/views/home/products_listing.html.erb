@@ -14,9 +14,12 @@
                     <div class="product-parent col-md-6 col-sm-6 col-xs-12 no-padding">
                       <div class="product col-md-12 col-sm-12 col-xs-12 no-padding">
                         <div class="image-content col-md-12 col-sm-12 col-xs-12 no-padding">
-                          <a href="/products/<%= product.alias_url %>"><img src="<%= product.img_url%>" alt="product-img" class="img-responsive"></a>
+                          <a href="/products/<%= product.alias_url %>">
+                            <img src="<%= product.img_url%>" alt="product-img" class="img-responsive">
+                          </a>
                           <a href="/products/<%= product.alias_url %>" class="text-content">
-                            <span><%= product.name %></span> </a>
+                            <span><%= product.name %></span>
+                          </a>
                         </div><!--IMAGE-CONTENT-->
 
                       </div><!--PRODUCT-->
@@ -37,8 +40,8 @@
 <!-- center align div on odd count -->
 <% if @products.count % 2 == 1 %>
     <script>
-        $(document).on("ready", function(){
-            $('.product-content:last-child').addClass('product-without-slide');
-        });
+      $(document).on("ready", function(){
+        $('.product-content:last-child').addClass('product-without-slide');
+      });
     </script>
 <% end %>
