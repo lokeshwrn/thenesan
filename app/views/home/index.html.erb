@@ -8,134 +8,27 @@
 
           <h3 class="title"><a>OUR PRODUCTS</a></h3>
 
-          <h4 class="title"><a>Feeders</a></h4>
-          <div class="description-parent col-md-4 col-sm-6 col-xs-12">
-            <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-              <div class="desc-img">
-                <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
+          <% Product.all.active.each do |prod| %>
+              <h4 class="title"><a><%= prod.name %></a></h4>
+              <div class="desc-container col-md-12 col-sm-12 col-xs-12 no-padding">
+                <% prod.articles.each do |art| %>
+                    <div class="description-parent col-md-6 col-sm-6 col-xs-12">
+                      <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
+                        <div class="desc-img">
+                          <img src="<%= art.img_url || "http://res.cloudinary.com/lokeshwrn/image/upload/v1460127634/thenesans/4.png" %>" alt="<%= art.title %>">
+                        </div>
+                        <div class="desc-content">
+                          <h4><%= art.title.titleize %></h4>
+
+                          <p><%#= art.description %>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
+                          <a class="button" href="<%= art.alias_url %>">Know More</a>
+                        </div>
+                      </div><!--mini-desc-->
+
+                    </div><!--description-parent-->
+                <% end %>
               </div>
-              <h4>Feeders</h4>
-
-              <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-              <a class="button">Know More</a>
-            </div><!--mini-desc-->
-          </div><!--description-parent-->
-
-          <div class="description-parent col-md-4 col-sm-6 col-xs-12">
-              <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="desc-img">
-                  <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
-                </div>
-                <h4>Feeders</h4>
-
-                <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-                <a class="button">Know More</a>
-              </div><!--mini-desc-->
-          </div><!--description-parent-->
-
-          <div class="description-parent col-md-4 col-sm-6 col-xs-12">
-              <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="desc-img">
-                  <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
-                </div>
-                <h4>Feeders</h4>
-
-                <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-                <a class="button">Know More</a>
-              </div><!--mini-desc-->
-          </div><!--description-parent-->
-
-          <div class="description-parent col-md-6 col-sm-6 col-xs-12">
-              <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="desc-img">
-                  <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
-                </div>
-                <h4>Feeders</h4>
-
-                <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-                <a class="button">Know More</a>
-              </div><!--mini-desc-->
-          </div><!--description-parent-->
-
-          <div class="description-parent col-md-6 col-sm-6 col-xs-12">
-              <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="desc-img">
-                  <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
-                </div>
-                <h4>Feeders</h4>
-
-                <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-                <a class="button">Know More</a>
-              </div><!--mini-desc-->
-          </div><!--description-parent-->
-
-
-          <h4 class="title"><a>Washers</a></h4>
-          <div class="description-parent col-md-4 col-sm-6 col-xs-12">
-            <a href="/products/feeders">
-              <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="desc-img">
-                  <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
-                </div>
-                <h4>Feeders</h4>
-
-                <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-              </div><!--mini-desc-->
-            </a>
-          </div><!--description-parent-->
-
-          <div class="description-parent col-md-4 col-sm-6 col-xs-12">
-            <a href="/products/feeders">
-              <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="desc-img">
-                  <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
-                </div>
-                <h4>Feeders</h4>
-
-                <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-              </div><!--mini-desc-->
-            </a>
-          </div><!--description-parent-->
-
-          <div class="description-parent col-md-4 col-sm-6 col-xs-12">
-            <a href="/products/feeders">
-              <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="desc-img">
-                  <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
-                </div>
-                <h4>Feeders</h4>
-
-                <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-              </div><!--mini-desc-->
-            </a>
-          </div><!--description-parent-->
-
-          <div class="description-parent col-md-6 col-sm-6 col-xs-12">
-            <a href="/products/feeders">
-              <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="desc-img">
-                  <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
-                </div>
-                <h4>Feeders</h4>
-
-                <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-              </div><!--mini-desc-->
-            </a>
-          </div><!--description-parent-->
-
-          <div class="description-parent col-md-6 col-sm-6 col-xs-12">
-            <a href="/products/feeders">
-              <div class="mini-desc col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="desc-img">
-                  <img src="http://res.cloudinary.com/lokeshwrn/image/upload/w_500,h_150,c_fill/v1460127634/thenesans/4.png" alt="test">
-                </div>
-                <h4>Feeders</h4>
-
-                <p>Nesans Feeders can effectively manipulate your feeding needs whether it may be slurry removing Grizzlies or Vibrating Pans. We are your one stop feeding partner.</p>
-              </div><!--mini-desc-->
-            </a>
-          </div><!--description-parent-->
-
+          <% end %>
 
         </div><!--ROW-->
       </div><!--CONTAINER-->
@@ -148,16 +41,25 @@
   .description-parent{
     padding: 1%;
   }
+  .desc-container{
+    padding-bottom: 3%;
+  }
+  .desc-content, .desc-img{
+    width: 50%;
+    float: left;
+  }
   .desc-img img{
     width: 100%;
-    height: 150px;
-
   }
   .mini-desc:hover{
     border: 1px solid #d50000;
   }
-  .description-parent p{
+  .mini-desc p{
     line-height: 25px;
+  }
+  a.button{
+    font-size: 15px;
+    color: #d50000;
   }
   .description-content h4.title{font-size:30px;color:#000;text-align:left;padding-bottom: 15px;}
   .description-content h4.title a{color:#000;}
